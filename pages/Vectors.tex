@@ -52,4 +52,47 @@ A vector facing in the opposite direction can still be parallel. So that means t
 	\theta = cos^{-1}(\frac{\vec{P} \cdot \vec{B}}{|| \vec{P} || \cdot || \vec{B} ||})
 \end{align*}
 
-Now, another way to test if the vectors are parallel is using the unit vector, $\hat{v}$.
+Now, another way to test if the vectors are parallel is using the unit vector, $\hat{v}$. Now a unit vector is a 
+vector that retains it's direction, but its magnitude would be 1. 
+
+\begin{align*}
+	\hat{v} = \frac{\vec{v}}{|| \vec{v} ||}
+\end{align*}
+
+Now, a vector is parallel only if this the unit vector $\hat{a}$ is a multiple of $\hat{v}$. 
+\begin{align*}
+	\hat{a} = \pm c \cdot \hat{v}
+\end{align*}
+
+\subsubsection{Cross Product}
+The cross product produces a $\mathbb{R}^{3}$ vector from two $\mathbb{R}^{3}$ vectors. The product of this a vector in the same space 
+that of the original space. This also can be use to determine the perpendicular vector between the two vector factors. 
+
+\begin{center} \input{pages/graphics/crossproduct_1} \end{center}
+
+Now to compute the cross product, there are two major methods. The first one is called method of co-factors, but considering that cross products only require
+$\mathbb{R}^3$, the second method would be better.
+
+\begin{align*}
+	\vec{a} \times \vec{b} &= 
+		\begin{bmatrix} 
+			\hat{i} & \hat{j}  & \hat{k} \\ 
+			a_x & a_y & a_z \\ 
+			b_x & b_y & b_z 
+		\end{bmatrix}
+		\begin{matrix}
+			\hat{i} & \hat{j} \\ 
+			a_x & a_y \\ 
+			b_x & b_y \\ 
+		\end{matrix} \\ 
+\end{align*}
+\begin{align*}
+	\vec{a} \times \vec{b} = \begin{bmatrix} 
+						(a_yb_z-a_zb_y)\hat{i} \\
+						(a_zb_x-a_xb_z)\hat{j} \\ 
+						(a_yb_x-a_xb_y)\hat{k}
+						\end{bmatrix}	
+\end{align*}
+The idea is to draw diagonal lines between the components. This will result in the equation we see above. As mentioned above, using the cross product can produce 
+a perpendicular vector. But the cross product can be use to determine if the vectors are parallel. If the cross product returns a zero vector, 
+$\vec{0}$, then the two vectors used will be parallel to each others.

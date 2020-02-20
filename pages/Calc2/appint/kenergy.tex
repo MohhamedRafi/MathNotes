@@ -1,0 +1,36 @@
+\subsection{Kinetic Energy}
+
+Kinetic energy is defined by this formula: 
+
+\begin{equation}
+	KE = \frac{1}{2}mv^2 
+\end{equation}
+
+This is a simple equation for point masses, but if we had a bar rotating around some axis, then we need to consider
+that different parts of that bar will have differen $KE$. We need to setup a integral to calculate the total $KE$ that 
+rotational object has. Let's consider a bar rotating around the y-axis of a coordinate system. It rotates around that y-axis about 2 revolutions per second. The bar has $\delta = \frac{5kg}{m}$, and is 3 meters wide.
+We know that mass of a section of the bar is going to be: 
+
+\begin{equation}
+	m_i = \delta \Delta x
+\end{equation}
+
+Now we need to find out the speed of each part of the object. The object makes 
+two revolutions per second. That means the distances traveled is going $2*2\pi rd$. This is because, the circle formed by rotating is going to equalthe distance of the circluar path times the distance from the axis. Now writing it in terms of our x, the velocity is equal to: 
+
+\begin{equation}
+	v_i = 2(2\pi rx_i)
+\end{equation}
+
+Now we can write in terms of the integral: 
+
+\begin{equation}
+	KE = \frac{1}{2}mv^2 \to KE = \frac{\delta}{2}\int_0^3{(4\pi(3)x)^2}dx
+\end{equation}
+\begin{equation}
+	KE = {72\delta\pi^2}\int_0^3{x^2}dx 
+\end{equation}
+
+% \begin{center}
+% 	\input{pages/images/ke}
+% \end{center}

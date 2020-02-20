@@ -1,0 +1,11 @@
+{
+	"settings": {
+        "TEXroot": "root.tex"
+    },
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	]
+}

@@ -32,21 +32,30 @@
 	"buffers":
 	[
 		{
-			"file": "pages/Calc2/appint/hydrostatic.tex",
+			"file": "pages/Calc2/appint/volume.tex",
 			"settings":
 			{
-				"buffer_size": 1688,
+				"buffer_size": 2334,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "root.tex",
+			"file": "pages/Calc2/appint/kenergy.tex",
 			"settings":
 			{
-				"buffer_size": 528,
+				"buffer_size": 1388,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pages/Calc2/appint/applications_of_integration.tex",
+			"settings":
+			{
+				"buffer_size": 465,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -252,12 +261,19 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/mohha/Desktop/School Work/MathNotes",
-		"/C/Users/mohha/Desktop/School Work/MathNotes/pages",
-		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/images"
+		"/Users/mohhamedrafi/Documents/MathNotes",
+		"/Users/mohhamedrafi/Documents/MathNotes/pages",
+		"/Users/mohhamedrafi/Documents/MathNotes/pages/images"
 	],
 	"file_history":
 	[
+		"/Users/mohhamedrafi/Documents/MathNotes/root.tex",
+		"/Users/mohhamedrafi/Documents/MathNotes/README.md",
+		"/Users/mohhamedrafi/Documents/MathNotes/pages/Calc2/appint/hydrostatic.tex",
+		"/Users/mohhamedrafi/Documents/MathNotes/pages/images/ke.tex",
+		"/Users/mohhamedrafi/Documents/MathNotes/pages/Calc2/appint/volume.tex",
+		"/Users/mohhamedrafi/Documents/MathNotes/pages/Calc2/appint/applications_of_integration.tex",
+		"/Users/mohhamedrafi/Documents/MathNotes/pages/Calc3/vectors.tex",
 		"/C/Users/mohha/Desktop/School Work/MathNotes/root.log",
 		"/C/Users/mohha/Desktop/School Work/MathNotes",
 		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc2/appint/center_of_mass.tex",
@@ -304,7 +320,7 @@
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -318,6 +334,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"align",
 			"equation",
 			"4",
 			"equation",
@@ -344,52 +361,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "pages/Calc2/appint/hydrostatic.tex",
+					"file": "pages/Calc2/appint/volume.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1688,
+						"buffer_size": 2334,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1336,
-								1336
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 54.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "root.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 528,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								528,
-								528
+								586,
+								586
 							]
 						],
 						"settings":
@@ -402,13 +391,69 @@
 					},
 					"stack_index": 1,
 					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "pages/Calc2/appint/kenergy.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1373,
+								1373
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "pages/Calc2/appint/applications_of_integration.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								464,
+								464
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -453,7 +498,7 @@
 	"project": "mnotes.sublime-project",
 	"replace":
 	{
-		"height": 54.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -462,6 +507,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"app",
+				"pages/Calc2/appint/applications_of_integration.tex"
+			],
 			[
 				"cal",
 				"pages\\Cal\\Calc.tex"

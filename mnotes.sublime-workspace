@@ -4,12 +4,24 @@
 		"selected_items":
 		[
 			[
-				"ap",
-				"\\approx                                           \tlatex-mathsymbols"
+				"para",
+				"\\paragraph{title}                                 \tlatex-document"
+			],
+			[
+				"lang",
+				"\\langle                                           \tlatex-mathsymbols"
+			],
+			[
+				"subsub",
+				"\\subsubsection*{title}                            \tlatex-document"
 			],
 			[
 				"sec",
-				"\\section{title}                                   \tlatex-document"
+				"\\sec                                              \tlatex-mathsymbols"
+			],
+			[
+				"ap",
+				"\\approx                                           \tlatex-mathsymbols"
 			],
 			[
 				"sqrt",
@@ -32,30 +44,30 @@
 	"buffers":
 	[
 		{
-			"file": "pages/Calc2/appint/volume.tex",
+			"file": "pages/Calc3/vector_functions.tex",
 			"settings":
 			{
-				"buffer_size": 2334,
+				"buffer_size": 26,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "pages/Calc2/appint/kenergy.tex",
+			"file": "root.tex",
 			"settings":
 			{
-				"buffer_size": 1388,
+				"buffer_size": 936,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "pages/Calc2/appint/applications_of_integration.tex",
+			"file": "pages/Calc3/coordinatesystems.tex",
 			"settings":
 			{
-				"buffer_size": 465,
+				"buffer_size": 6559,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -150,6 +162,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"LatexTools: Temp",
+				"LaTeXTools: Delete temporary files"
+			],
 			[
 				"settings",
 				"Preferences: Settings"
@@ -261,26 +277,31 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/mohhamedrafi/Documents/MathNotes",
-		"/Users/mohhamedrafi/Documents/MathNotes/pages",
-		"/Users/mohhamedrafi/Documents/MathNotes/pages/images"
+		"/C/Users/mohha/Desktop/School Work/MathNotes",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc3",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/images"
 	],
 	"file_history":
 	[
-		"/Users/mohhamedrafi/Documents/MathNotes/root.tex",
-		"/Users/mohhamedrafi/Documents/MathNotes/README.md",
-		"/Users/mohhamedrafi/Documents/MathNotes/pages/Calc2/appint/hydrostatic.tex",
-		"/Users/mohhamedrafi/Documents/MathNotes/pages/images/ke.tex",
-		"/Users/mohhamedrafi/Documents/MathNotes/pages/Calc2/appint/volume.tex",
-		"/Users/mohhamedrafi/Documents/MathNotes/pages/Calc2/appint/applications_of_integration.tex",
-		"/Users/mohhamedrafi/Documents/MathNotes/pages/Calc3/vectors.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc3/surfaces.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc3/coordinatesystems.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/images/simple_line.pdf",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/root.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc2/appint/hydrostatic.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc2/appint/applications_of_integration.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/python/space_curves.py",
+		"/C/Users/mohha/Desktop/test.cpp",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/test2.tex",
+		"/D/Steam/steamapps/common/The Witcher 3/Mods/mod0000_MergedFiles/bin/config/r4game/user_config_matrix/pc/input.xml",
+		"/D/Steam/steamapps/common/The Witcher 3/Mods/mod0000_MergedFiles/content/scripts/game/r4Game.ws",
+		"/C/Users/mohha/Desktop/Rafi's Server/server.properties",
+		"/C/Games/Command and Conquer Generals Deluxe Edition/Command and Conquer Generals Zero Hour/game.dat",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/python/args_reader.py",
 		"/C/Users/mohha/Desktop/School Work/MathNotes/root.log",
 		"/C/Users/mohha/Desktop/School Work/MathNotes",
 		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc2/appint/center_of_mass.tex",
 		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc2/appint/work.tex",
-		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc2/appint/applications_of_integration.tex",
-		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc2/appint/hydrostatic.tex",
-		"/C/Users/mohha/Desktop/School Work/MathNotes/root.tex",
 		"/C/Users/mohha/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
 		"/C/Users/mohha/Desktop/School Work/MathNotes/mnotes.sublime-project",
 		"/C/Users/mohha/Desktop/School Work/MathNotes/root.sublime-workspace",
@@ -320,7 +341,7 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
@@ -334,7 +355,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"align",
+			"equation",
+			"x",
+			"coordinatesystems",
+			"> ",
+			"equation",
+			"args_clean_func",
+			"parser",
+			"Parser",
+			"parser",
+			"str",
 			"equation",
 			"4",
 			"equation",
@@ -361,24 +391,52 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "pages/Calc2/appint/volume.tex",
+					"file": "pages/Calc3/vector_functions.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2334,
+						"buffer_size": 26,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								586,
-								586
+								25,
+								25
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "root.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 936,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								558,
+								558
 							]
 						],
 						"settings":
@@ -393,59 +451,32 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "pages/Calc2/appint/kenergy.tex",
+					"buffer": 2,
+					"file": "pages/Calc3/coordinatesystems.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1388,
+						"buffer_size": 6559,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1373,
-								1373
+								6559,
+								6559
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2755.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "pages/Calc2/appint/applications_of_integration.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 465,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								464,
-								464
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -453,7 +484,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -492,13 +523,13 @@
 	},
 	"output.latextools":
 	{
-		"height": 132.0
+		"height": 39.0
 	},
 	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"project": "mnotes.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -508,16 +539,12 @@
 		"selected_items":
 		[
 			[
-				"app",
-				"pages/Calc2/appint/applications_of_integration.tex"
+				"root",
+				"root.tex"
 			],
 			[
 				"cal",
 				"pages\\Cal\\Calc.tex"
-			],
-			[
-				"root",
-				"root.tex"
 			]
 		],
 		"width": 0.0
@@ -544,11 +571,11 @@
 	"settings":
 	{
 	},
-	"show_minimap": false,
+	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 238.0,
+	"side_bar_width": 248.0,
 	"status_bar_visible": false,
 	"template_settings":
 	{

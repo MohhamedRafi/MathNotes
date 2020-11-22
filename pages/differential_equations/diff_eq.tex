@@ -1,0 +1,83 @@
+\chapter{Differential Equations}
+A differential equation just relates the change in some variable with respect to another to another quantity. They are useful tools to model real life phenomena. A first order differential equation is one of which it's the first derivative that is involved in the equation.
+\begin{equation*}
+	\dd{y}{x} = \mathrm{f}(x,y)
+\end{equation*}
+
+In this case, these functions aren't really multi-variable equations, $y$ and $x$ share a dependence relationship. Basically most of the time these equations are implicit derivatives of some solution equation.
+
+
+\section{Classification of Types}
+Differential equations can be classified into different categories, each having different methods of solving them.Ordinary differential equations are ones that deal with regular one-dimensional derivatives. 
+\begin{equation*}
+	\frac{\mathrm{d}y}{\mathrm{d}x} +5y = 7\phi(x) 
+\end{equation*}
+Partial differential equations are ones that deal with partials derivatives. 
+\begin{equation*}
+	\pdi{y}{x} +5y = 7\pdi{\phi(x)}{x} 
+\end{equation*}
+You can classify differential equations by order, usually the highest order of the a derivative in the equation. Like how you classify polynomials with highest exponent. Other classifications will come up and their solutions would be given their own sections.
+\section{Differential Form}
+Recall that a differential is considered to be $\mathrm{d}y=y'\mathrm{d}x$. When you divide a differential by another differential of a different variable, you can arrive back at the differential equation. The differential form is considered to be very important. When solving equations, typically you want the equation to be first in differential form. This standard example of a differential form is:
+\begin{equation*}
+	\phi_1(x,y)\mathrm{d}x + \phi_1(x,y)\mathrm{d}y = 0
+\end{equation*} 
+The differential equation, expressed as a function is $F(x,y,y',...,y^{(n)}) = 0$. This is called the general form. It's a bit different from what a differential form is, for example,  
+\begin{equation*}
+	\frac{\mathrm{d}^2y}{\mathrm{d}x^2} + \frac{\mathrm{d}y}{\mathrm{d}x} + 3x = 0  
+\end{equation*}
+would be considered a general form of the differential equation. The normal form is when we solve for one of the derivatives, 
+\begin{equation*}
+	\frac{\mathrm{d}^2y}{\mathrm{d}x^2}  = - \frac{\mathrm{d}y}{\mathrm{d}x} - 3x  
+\end{equation*}
+\section{General Solutions and Unique Solutions}
+When we talk about solutions to differential equations, we mostly talk about functions that when plugged into the equation, will result in a true expression. For example, when given $y=f(x)$, and the differential equation $y'=\phi(x)$, if we took the derivative of $y$, then we would see that $y'=\phi(x)$. The function $y=f(x)$ is what we consider to be a solution to the differential equation. 
+\subsection{Interval of Solution}
+The interval of solution, $I$, is the interval of the solution's domain that satisfy the differential equation. That unique means that even if we get a function that is defined on some higher interval $I$, the actual domain of the solution might be a sub-set of $I$. For example, 
+\begin{equation*}
+	y'x + y = 0
+\end{equation*}
+has a solution of $y=1/x$, but $y$'s domain is $(-\infty, 0) \cup (0,\infty)$. But the solution must be differentiable on the solution interval, so we can't include $0$ in any of our domain. Any $I$ that contains a solution must not contain $0$, so any solution \textit{curve} must be defined on that interval. We would have to break the interval into smaller pieces, and find the largest of pieces. For this differential equation, two $I$'s exist, $(-\infty, 0)$ or $(0,\infty)$ each with their own solution curve.
+\subsection{Family of Solutions}
+When you solve a differential equation, you notice that there are some constants left over. These constants can take on any value. So what you have is a common list of functions that all differ by a constant or some value of that constant. First order equations usually only contain a single constant parameter, so we call solutions that contain these parameters \textbf{one-parameter family of solutions}. When you are given an initial condition, and you solve for that constant, what you did was find a \textbf{particular solution}.
+\subsection{Existence and Uniqueness Theorem}
+Given $y'=f(x,y)$ and you impose an initial condition $y(x_0) = y_0$, if $f(x,y)$ and it's partial derivative with respect to y, $\pdi{f}{y}$, are both continuous on the same input space $\alpha < x < \beta$, $\gamma < y < \sigma$, and as along as the input space contains $(x_0, y_0)$, then there is some unique solution to the equation in some interval $x_0 - h < x < x_0 + h$ that is contained in a higher interval of $\alpha < x < \beta$. 
+
+When we say a unique solution, that means from a graphical point of view, that solution will never touch another curve. There is a concept called interval of validity is like the interval of solution but must contain the $(x_0, y_0)$ and no discontinuous inputs. It would be hard to find the exact interval of validity without solving the equations. But we can guess what interval it would be using this theorem. \textbf{NOTE}, to use this theorem just find the shared domain of both $f(x,y)$ and $D_y f$.
+
+\subsection{General Solution}
+A general solution is any solution that doesn't take into account of an initial condition. Really the hard part of find a general solution is that we have to show this solution contains all solutions in some interval $I$. If we can find that all solutions can be obtained from an $n$-order differential equation in some $n$-parameter family, that solution family is consider a general solution. In linear equations, imposing conditions on it makes sure all those conditions are passed along to the solutions. This is why a general solution to the differential equation can be found strictly. It's not always the case that you can get all the solutions from a $n$-parameter family. 
+
+\section{Initial Value Problems}
+The most common types of problems that you will deal with in differential equations is the initial value problem. Consider you have an differential equation $y'=f(x,y)$, and you are given that a solution to the differential equation will have to also fulfill a initial condition, such as $y(x_0) = y_0$. It's usually as simple as find the value for the constant of integration, but sometimes it's a bit more complicated. 
+
+\subsection{Explicit vs Implicit Equations}
+An explicit relationship in math is exactly what the name implies. A direct relationship that relates two quantities together. For example, 
+\begin{equation*}
+	y = x 
+\end{equation*}
+is an example of a explicit relationship. But the issue is this equation, 
+\begin{equation*}
+	y - x = 0 
+\end{equation*}
+which is an example of implicit relationship because it relates $x,y$ to a different quantity, $0$.
+More complicated implicit equations show up as solutions to differential equations, 
+\begin{equation*}
+\ln|y| = f(x)
+\end{equation*} 
+Here we have a relationship that has $y \in \mathbb{R}$. But it's implicit because $\ln|y|$ is relating to $f(x)$, not $y$ itself. If we solve for $y$, we have a relationship the violates the original range. So we have to be careful about finding the constant of integration with implicit relationships and domain restrictions.
+\subsection{Example}
+Given $x^2y'= y- xy$, and the initial condition $y(-1) = 4$, find a solution that satisfy the differential equation.
+\begin{align*}
+	\frac{1}{y} \mathrm{dy} &= \frac{1-x}{x^2} \mathrm{dx} \\ 
+	\ln |y| &= \int \frac{1}{x^2} - \frac{1}{x} \: \mathrm{dx} \\ 
+	\ln |y| &= -x^{-1} - \ln|x| + C  
+\end{align*}
+At this point, we can find an explicit relationship by solving for $y$, but we won't be able to use our initial condition, because $-1$ isn't in the domain of the solution. So we will use the implicit relationship, 
+\begin{equation*}
+	\ln|-4| = 1 - 0 + C 
+\end{equation*}
+giving us the solution of 
+\begin{equation*}
+	y = e^{-x^{-1} - \ln|x| + \ln|4| - 1}
+\end{equation*}	

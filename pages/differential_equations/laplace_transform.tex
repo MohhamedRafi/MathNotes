@@ -1,0 +1,105 @@
+\chapter{Laplace Transform}
+We note that a transform takes one function and converts it to another. The Laplace transform is an integral transform. Given any $f(x,y)$, by taking a derivative with respect to one variable will always lead to an equation (assuming the integral is definite and convergent) within terms of the other variable. 
+
+Given a interval of integration bounded below, $[0, \infty)$, the integral transform is usually defined like this, 
+
+\begin{equation*}
+	\int_a^b K(s,t)f(t) \:\diff{dt} 
+\end{equation*}
+
+Where $f(t)$ is defined on the interval of integration. When the integral converges we will get a function that is defined in terms of $s$. We will look at a special case of the integral transform where $K = e^{-st}$. 
+
+\section{Laplace Transform Integral}
+Given $f(t)$, where it's defined on $[0,\infty)$, the Laplace Transform for this function is defined
+\begin{equation*}
+	\mathcal{L} \{ f(t) \} = \int_0^\infty e^{-st} f(t) \:\diff{dt} = F(s)
+\end{equation*}
+Note that computing the Laplace transform will always take some integration by parts, so to review a quick method of computing the integration by parts, check the integration methods section. Other than that, here is a table of general common Laplace Transforms.
+
+\begin{align*}
+	\mathcal{L} \{ 1 \} &= \frac{1}{s} \\
+	\mathcal{L} \{ t^n \} &= \frac{n!}{s^{n+1}} \:\: n=1,2,3,...\\
+	\mathcal{L} \{ e^{at} \} &= \frac{1}{s-a} \\
+	\mathcal{L} \{ \sin(kt) \} &= \frac{k}{s^2+k^2} \\
+	\mathcal{L} \{ \cos(kt) \} &= \frac{s}{s^2+k^2} \\
+\end{align*}
+
+\subsection{Conditions For Existence}
+These conditions are not absolutely needed for the existence of a Laplace Transform but still can be used to see if one will exist. First $f(t)$ must be piecewise continuous. Basically continuous for piecewise functions. A general idea is that all the pieces are continuous, and the finite amount of discontinuities that exist are really just ones that are jumping. 
+
+The formal definition is, on the interval $I$, $f$ is piecewise continuous if $0 \leq a \leq t \leq b$,
+where $t_k$, $k=1,2,3,...,n$, and $t_{k-1} < t_k$ where at $f(t_k)$ exist a finite amount of discontinuities but are continuous on the open intervals of $(t_{k-1},t_k)$.
+
+$f(t)$ also must be of exponential order, meaning that it doesn't grow faster then a exponential function. 
+\begin{equation*}
+	|f(t)| \leq Me^{ct}
+\end{equation*}
+where $ M > 0 $, $T>0$, and C is a positive constant, on the interval of $t>T$. 
+
+\subsection{Laplace Inverse Transform}
+Inverse transforms are simply reverses the transform, 
+
+\begin{align*}
+	\mathcal{L}^{-1} \{ \frac{1}{s} \} &= 1 \\
+	\mathcal{L}^{-1} \{ \frac{n!}{s^{n+1}} \} &= t^n \:\: n=1,2,3,...\\
+	\mathcal{L}^{-1} \{ \frac{1}{s-a} \} &= e^{at} \\
+	\mathcal{L}^{-1} \{ \frac{k}{s^2+k^2} \} &= \sin(kt) \\
+	\mathcal{L}^{-1} \{  \frac{s}{s^2+k^2} \} &= \cos(kt) \\
+\end{align*}
+
+The key is to algebraically simplify the expression or dividing or multiplying by a constant to make it look like one of the table functions. 
+
+\begin{equation*}
+	\mathcal{L}^{-1} \{\frac{1}{s^5}\}
+\end{equation*}
+We know that it looks like one of our table functions but it's missing the $n!$, so lets consider this
+\begin{equation*}
+	\frac{1}{n!}\mathcal{L}^{-1} {\frac{n!}{s^5}} = \mathcal{L}^{-1} \{\frac{1}{s^5}\}
+\end{equation*}
+Because $\mathcal{L}$ is a integral transform it has linearity with constants. We know the inverse of the right hand side, so we find the solution of 
+\begin{equation*}
+	\frac{1}{n!}\mathcal{L}^{-1} {\frac{n!}{s^5}} = \frac{1}{4!}t^4
+\end{equation*}
+	
+\pagebreak
+\section{Volterra Integral Equation}
+Solve for $f(t)$ using this Volterra Integral equation by way of a Laplace Transform.
+
+\begin{equation*}
+f(t) = 4t-16\int_0^t \sin(t)f(t-\tau)\:\diff{d\tau}
+\end{equation*}
+
+First we apply the $\mathcal{L}$, 
+\begin{align*}
+	F &= \frac{4}{s^2} - 16\mathcal{L}\{\int_0^t \sin(t)f(t-\tau)\:\diff{d\tau}\} \\ 
+	F &= \frac{4}{s^2} - 16\mathcal{L}\{\sin(t)\}F \\ 
+	F + 16\frac{1}{s^2+1}F &= \frac{4}{s^2} \\ 
+	F (1+\frac{16}{s^2+1}) &= F\frac{s^2+17}{s^2+1}=\frac{4}{s^2} \\ 
+	F &= \frac{4}{s^2}\frac{s^2+1}{s^2+17} \\ 
+	F &= 4(\frac{1}{s^2(s^2+17)}+\frac{s^2}{s^2(s^2+17)}) \\
+	F &= 4(\frac{1}{s^2(s^2+17)}+\frac{1}{(s^2+17)}) \\
+	F &= 4(\frac{\frac{1}{s(s^2+17)}}{s}+\frac{1}{s^2+17})
+\end{align*}
+Now we apply the $\mathcal{L}^{-1}$,
+\begin{align*}
+	f(t) &= 4\mathcal{L}^{-1}\{\frac{\frac{1}{s(s^2+17)}}{s}\} + 4\mathcal{L}^{-1}\{\frac{1}{s^2+17}\} \\
+	f(t) &= 4\frac{1}{\sqrt{17}}\sin(\sqrt{17}t)+4\mathcal{L}^{-1}\{\frac{\frac{1}{s(s^2+17)}}{s}\}
+\end{align*}
+For the second inverse, we must first apply the second inverse convulsion theorem,
+\begin{equation*}
+\mathcal{L}^{-1}\{\frac{\frac{1}{s(s^2+17)}}{s}\} = \mathcal{L}^{-1}\{\frac{F_1(s)}{s}\} = \int_0^t f_1(\tau) \:\diff{d\tau} 
+\end{equation*}
+Where $f_1(t)=\mathcal{L}^{-1}\{F(s)\}$, by the first inverse convulsion theorem, 
+\begin{equation*}
+	f_1(t) =  \mathcal{L}^{-1} \{  \frac{1}{s}\frac{1}{s^2+17} \} = 
+	 1 * (\frac{1}{\sqrt{17}}\sin(\sqrt{17}t)) = \int_0^t {\sqrt{17}}\sin(\sqrt{17}\tau) \:\diff{d\tau} 
+\end{equation*}
+\begin{equation*}
+	f_1(t) = -\frac{1}{17}\cos(\sqrt{17}t)+\frac{1}{17}
+\end{equation*}
+\begin{align*}
+	\mathcal{L}^{-1}\{\frac{\frac{1}{s(s^2+17)}}{s}\} &= \int_0^t -\frac{1}{17}\cos(\sqrt{17}\tau)+\frac{1}{17} \:\diff{d\tau} \\ 
+	&= \frac{-1}{17\sqrt{17}}\sin(\sqrt{17}t)+\frac{1}{17}t \\ 
+	f(t) &= 4\frac{1}{\sqrt{17}}\sin(\sqrt{17}t) + 4(\frac{-1}{17\sqrt{17}}\sin(\sqrt{17}t)+\frac{1}{17})= \frac{64\sqrt{17}}{289}\sin \:\left(\sqrt{17}t\right)+\frac{4t}{17}
+\end{align*}
+

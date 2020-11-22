@@ -1,0 +1,64 @@
+\chapter{Electromagnetic Induction}
+To recap, we note that a magnetic field is created by moving charges or currents. We didn't talk about how a magnetic field can create a \textbf{induced} current or an $\EMF$. So we are going in reverse, we are trying to figure out how a magnetic field creates a current. Through experiments, we find that the induced $\EMF$ is proportional to the rate of change of magnetic flux, $\Phi_\mr{B}$.
+
+\section{Faraday's Law}
+As we note, for any general flux integral, 
+\begin{equation*}
+	\Phi = \iint_{S} \vv{F} \cdot \diff{d}\vv{S}
+\end{equation*}
+This hold true for magnetic flux but don't confuse it with a closed surface integral. This integral applies to non-closed surfaces for non-zero magnetic flux. We note from the introduction that changes to the magnetic flux will yield a $\EMF$. Since $\Phi_\mr{B}$ is dependent on $\vv{S}$, changes to the surface will also yield a $\EMF$. I think we assume a constant $\vv{B}$ for now but both $\vv{B}$ and the area can be dependent on time.  
+
+Faraday's Law states,
+\begin{equation*}
+	\EMF = -\dd{\Phi_\mr{B}}{t}
+\end{equation*}
+That the induced $\EMF$ is equal to a changing magnetic flux over time. The direction of the $\EMF$ and current is determined by this procedure. First consider the positive direction for the normal surface vector. Second determine the sign of the $\EMF$, where if the $\dd{\Phi_\mr{B}}{t}$ is positive, then $\EMF$ is negative, or visa versa. Then determine the cross of normal surface vector and the magnetic field vector. If the $\EMF$ is positive, the direction (or rotation) of the cross will be the same direction for 
+$\EMF$, if it's negative, the direction (or rotation) is the opposite of the cross. If the current loop is a coil that has $n$ identical turns, and $\Phi_\mr{B}$ remains the same through each turn, 
+\begin{equation*}
+	\EMF = -N\dd{\Phi_\mr{B}}{t}
+\end{equation*}
+\subsection{Lenz's Law}
+Consider the previous section's method on determine the direction of the induced current. Lenz's Law is a quick way to summarize those results. The law states that the direction of any magnetic induction effect is such as to oppose the cause of the effect. This means if either $\vv{B}$ or $\vv{A}$ changes in any direction, the magnetic induction effect will be in the opposite direction (that's the $\EMF$ or current). For example, let's say the magnetic field is pointing upwards, coaxial with a circular loop. By Lenz's Law, the opposing direction for the increasing magnetic field is downwards (we don't know the magnitude yet). Using the right hand rule, we find that the opposing magnetic field causes a clockwise rotation for the induced current and $\EMF$. Remember that Lenz's Law relates this concept to changing magnetic flux, not the flux itself. This law comes naturally from relating the energy conservation laws. If the law was reversed, that means the induced current would be in the direction of the induction. Meaning the induced current will create a magnetic field that will add to the magnetic field that caused the induction, and in turn create a larger induction current, and so on. You just created a stronger magnetic field from nothing which is a clear violation of energy conservation. 
+\section{Motional Electromotive Force}
+Let's consider that we attached a conducting rod to some rail. If we had the conducting rod move in a magnetic field, $\vv{B}$, then we would create an $\EMF$. The reason why this emf is created is because the magnetic field creates an electrical field inside the length of the rod. The magnetic field would separate the positive and negative charges. This means that there is going to be a potential difference between the top and the bottom of the rod as well an electrical field. As we defined electrical potential,
+\begin{equation*}
+	V_{ab} = -\int \vv{E} \cdot \diff{d}\ell
+\end{equation*}
+the magnitude of the potential would be $V=\mr{E}\ell$. Let's assume that we are able to maintain a constant velocity. The only that would be possible the electrical field cancels out the magnetic field. 
+\begin{equation*}
+	\vv{F}_b = q\vv{v} \times \vv{B} = \vv{F}_e = q\vv{E} 
+\end{equation*}
+We can use this to rewrite the potential in terms of the magnetic field and velocity.
+\begin{equation*}
+	\EMF = \mr{B}v\ell 
+\end{equation*}
+Where $\ell$ is the length of the rod. 
+\subsection{General Form of EMF}
+We can use the previous statement to generalize the emf produced for any shape loop.
+\begin{equation*}
+	\EMF = \oint (\vv{v} \times \vv{B}) \cdot \diff{d}\vv{\ell}	 
+\end{equation*}
+It's easy enough to see how we got this result from looking at the previous expressions.
+\pagebreak
+\section{Induced Electric Field}
+The electric field that is induced isn't exactly the same as an electric field caused by a point or charge distribution. Consider a solenoid that carries a current $I$ that changes with respect to time ($\dd{I}{t}$). The magnetic flux in the solenoid is increasing, causing an induced $\EMF$. We know that inside a solenoid, the magnetic field is uniform and is equal to,
+\begin{equation*}
+	\mr{B}=\mu_0nI
+\end{equation*}
+We can figure out the magnetic flux, 
+\begin{equation*}
+	\Phi = \vv{B} \cdot \vv{A}
+\end{equation*}
+where we take $\vv{A}$ to be the normal surface vector of thin slices of the solenoid. The magnetic flux would be equal to 
+\begin{equation*}
+	\Phi = BA = \mu_0nIA
+\end{equation*}
+because the magnetic field and the normal surface vector are parallel with each other. Faraday's Law states the induced $\EMF$,
+\begin{equation*}
+	\EMF = - \dd{\Phi_b}{t} = -\mu_0nA\dd{I}{t}
+\end{equation*}
+We also cannot forget that there is an induced current as well that differs from the $I$. The solenoid would create an induced current on any other conducting loop near it. We note that $I'$ (induced current) is equal to $\frac{\EMF}{R}$, were $R$ is the resistance of the loop. But what's not as clear is why there is a induced current. Remember that outside of a solenoid the magnetic field isn't present. We conclude that there must be an electric field that is induced by the emf created in the solenoid. The electric field does work on the charges, causing it to go around the loop, meaning if we work backwards, the induced electric field must equal the emf. Which makes senses, the force that causes the charges to go around is equal to the emf that created the said force. This electric field isn't conservative because if we generalize the loop integral, 
+\begin{equation*}
+	\oint \vv{E} \cdot \diff{d}\vv{\ell} = \EMF = -\dd{\Phi}{t}
+\end{equation*}
+We can see that it isn't equal to zero, which violates the rule for closed line integrals in conservative fields. We call this type of field a \textbf{non-electrostatic field}. This is because you will never be able to create this type of non-conservative field with a static charge. Also this means, if you have a magnetic field that changes over time (and note that a magnetic field is only caused by moving charges) you will create a electric field as well. 

@@ -1,0 +1,61 @@
+\chapter{Electric Field}
+\section{Introduction}
+Let's construct a vector field all over some random space $\mathbb{R}^3$. Every point on this vector field will give a vector that represents "the amount of force a single charge (Coulomb) would feel". Given the Coulomb force, 
+\begin{equation*}
+	\vec{\mathbf{F}} = \frac{1}{4\pi\epsilon_0} \frac{|q_1q_2|}{r^2} \hat{r}
+\end{equation*}
+The quantity we want would be $\frac{\vec{\mathrm{F}}}{\mathbf{Q}}$, where $\mathbf{Q}$ is some random positive test charge. That means a charge could exist at that random point, but really we don't factor that into our calculations. The quantity should only be dependent on the distance between from the source charge to the test charge, which means that the quantity would only be a property of the space around the source charge. This is called an \textbf{electric field}, and the source charge produces the electric field. \textbf{NOTE:} that the $\hat{r}$ is the displacement vector from the source charge to the test charge!
+
+\begin{equation*}
+	\vec{\mathrm{E}}(\vec{r}) = \frac{1}{4\pi\epsilon_0} \frac{|q_1|}{r^2}\hat{r}
+\end{equation*}
+If we gather the electric field in a certain region or area, the density of "electric field lines" or the lines representing the "flow", would be equal to the magnitude of the electric field. The direction would be the same as the direction of the electric field. \textbf{NOTE:} Since we defined the electric field based on a positive test charge, the field flows in the direction of the positive charges. Meaning, if we had a negative charge, it would just be the opposite direction.
+
+\section{Electric Field Lines}
+First let's some rules for the electric field from how we defined it. The field is a vector value at any given point in space that gives a force vector for a single test charge. The force is due to the source charge that generates a electric field. Since we define the electric field to be based on a positive test charge, that means that electric flow for anything in electrostatics would be based on positive charge movement. We can draw what's called electric field lines. These lines are based on the flow of the electric field lines. 
+
+\pic{electric_field}{Electric Dipole Field}{fv1}{0.25}
+
+The \textbf{density} of field lines at any given point for a select area is given by the magnitude of the electric field at that point. The \textbf{direction} is from the direction of the electric field.  
+
+\section{Example: Finding the Zero of Electric Field}
+Given this set up, find the point or region on the x-axis where the electric field would be zero.
+\pic{electrostatics_zero.PNG}{Electrostatics Setup}{fv1}{0.75}.
+
+First let's establish a bunch of possible regions that electric field could be 0. The first region would be in interval $x \in \: \{0, d\}$. We can calculate the total electric field in this region by way of superposition,
+
+\begin{align*}
+	\vec{\mathrm{E}} = \frac{1}{4\pi\epsilon_0}(\frac{-q}{x^2} + \frac{Q}{(d-x)^2}) \hat{\mathbf{x}}
+\end{align*}
+
+Before we do any math to simplify, let's consider what's happening. The negative charge is pulling our E-field towards the left, and the positive charge is pushing our E-field towards the left. The vector sum wouldn't cancel out to 0, because both charges aren't opposing each other. This gives us a hint. Since $Q$ is larger than $q$, we need to find a region where the distance from Q to the zero point $x_0$ is farther then the distance between the $q$ and $x_0$. This gives us the interval of ${-\infty, 0}$ because any point on that side would be closer to $q$ than $Q$. Giving us a chance for the field to be 0.
+
+\section{Superposition of Charges}
+We are going to be going over differential versions of principle of superposition in order to develop equations for continuous structures of charges. This should be used as a pre-text for Gauss's Law, which simplifies this process even further. 
+
+If we consider a discrete structure, with infinite amount of points, 
+\begin{equation*}
+	\sum_{i=0}^\infty \vec{\mathrm{E}}_i \to \sum \frac{1}{4\pi\epsilon_0}\frac{|q_i|}{r^2}\hat{r}
+\end{equation*} 
+We can easily transform into integral expression.
+\begin{equation*}
+	\int \mathrm{d}\vec{\mathrm{E}}
+\end{equation*}
+where the differential notes the electric field due to a differential of charge $\diff{dx}$. We take the sum of all individual fields due to some small section of charge. 
+\begin{equation*}
+	\int \vec{\diff{dE}} = \frac{1}{4\pi\epsilon_0}\int \frac{1}{r^2}\hat{r} \:\diff{dq}
+\end{equation*}
+
+\subsection{Superposition of Line Charge}
+We consider a charge that is uniformly placed and distributed over the $x$-axis, with a length of spanning of $L$, with a charge per unit length of $\lambda$. We consider a test charge placed on the $+y$-axis, centered at $x=0$. We choose the origin to be the coordinate points $(0,0)$.
+
+
+We note the distance from any point on the $x$-axis to a positive $y=+R$, would be $\sqrt{x^2+R^2}$. The $\hat{r}$, from the source charges of $\diff{dq}$ would be $\hat{r} = \frac{1}{\sqrt{x^2+R^2}} \langle -x, R \rangle$. At this point, we can setup most of the equation for the super position. We note that the differential of charge would be $\lambda \diff{dx}$, because if we took a small section of the line, the charge contained would equal to our charge per unit length times the length of the section.
+\begin{align*}
+	\vec{\mathrm{E}} &= \frac{\lambda}{4\pi\epsilon_0}\int \frac{-x}{(x^2+R^2)^{3/2}}\hat{\mathbf{x}} +   \frac{R}{(x^2+R^2)^{3/2}}\hat{\mathbf{y}} \:\: \diff{dx} \\ 
+	\vec{\mathrm{E}} &= \frac{\lambda  L}{2 \pi \epsilon _0 R \sqrt{L^2+R^2}} \hat{\mathbf{y}}
+\end{align*}
+
+As you can see, due to symmetry a perpendicular test charge above a line charge will face no force in the direction parallel to the line. We can find some general results from the this equation by taking two different limits. 
+\pagebreak
+\section{Gauss' Law}

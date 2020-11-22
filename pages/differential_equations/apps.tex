@@ -1,0 +1,78 @@
+\chapter{Differential Equation Applications}
+This chapter will go over all the application problems you might have in the class. Before we over that, important ass note here. Conservations factors in this class aren't as simple as metric systems. For example mass in imperial is equal $F/g$, because force is lb-force and g=$32ft/s^2$.
+
+\section{Growth and Decay}
+All these problems deal with simple growth and decay. This includes logistic models, Newton's law of cooling, and simple growth and decay. 
+\subsection{Simple Growth and Decay}
+Given $y' = kx$, you have a simple exponential growth problem. Given $y(x_0) = y_0$, the general solution would be, 
+\begin{equation*}
+	y(x) = C_0e^{kx}
+\end{equation*}
+Solving, for the constant of integration, you would get 
+\begin{align*}
+	y_0 &= C_0e^{kx_0} \\ 
+	\frac{y_0}{e^{kx_0}} &= C_0 	
+\end{align*}
+\subsection{Newton's Law of Cooling}
+Newton's law of cooling is defined in this general differential equation, 
+\begin{equation*}
+	\dd{T}{t} = k(T-T_M)
+\end{equation*}
+We assume $T_M$ is a given constant, the solution to this differential equation is 
+\begin{align*}
+	\frac{1}{T-T_m} \dd{T}{t} &= k \\ 
+	\ln|T-T_m|  &= kt+C \\ 
+	T - T_m &= e^{kt+C} \\ 
+	T &= Ce^{kt} + T_m  
+\end{align*}
+As you can see the constant of integration isn't exactly $T_m$, solving for the constant of integration would,
+\begin{equation*}
+	\frac{T_0-T_m}{e^{kt_0}} = C
+\end{equation*}
+\subsection{Logistic Growth Models}
+A logistic growth model is defined to be this, 
+\begin{equation*}
+	\dd{P}{t} = P(r-\frac{r}{k}P)
+\end{equation*}
+Where we assume $r$ to be the rate of proportionality and $k$ to be the max carrying capacity. 
+If we simplify it down, 
+\begin{equation*}
+	\dd{P}{t} = aP- bP^2
+\end{equation*}
+where $a=r$, and $b=r/k$. We can now work on solving this differential equation.
+\begin{align*}
+	\frac{\mathrm{dP}}{aP-bP^2} &= \mathrm{dt} \\ 
+	(\frac{1/a}{P} + \frac{b/a}{a-bP})\mathrm{dP}  &= \mathrm{dt} 
+\end{align*}
+After this point, it's just algebra to solve the equation, so the given solution is 
+\begin{equation*}
+	P(t) = \frac{aP_0}{bP_0+(a-bP_0)e^{-at}}
+\end{equation*}
+You can also have the growth rate written in terms of things that are also harvested or restocked at a different rate function of $h(t)$.
+\begin{equation*}
+	P' = P(r-\frac{r}{k}P) \pm h(t)
+\end{equation*}
+where we can assume $h(t)$ will be a constant or a continuous function.
+
+\section{Mixtures and Physics Applications}
+All these problems are dealing with physical applications of differential equations with respect to chemistry and physics. 
+\subsection{Mixtures}
+When you are mixing two things together, the simple expression can be written down to determine how much of something you have when a mixture is leaving a container. 
+\begin{equation*}
+	\dd{A}{t} = R_{in} - R_{out}
+\end{equation*}
+The hard part is finding out what goes in and what goes out. Let's deal with question from an exam,
+
+
+
+A large tank is partially filled with 100 gallons of fluid in which 10 pounds of salt are dissolved. Brine (a salt solution in water) containing (1/2) lb. of salt per gallon is pumped into the tank at a rate of 6 gal/minute. The well mixed solution is them pumped out at a slower rate of 4 gal/min. Find the amount of salt (in pounds) in the tank after 30-minutes. Round your answer to three digits after the decimal sign.
+
+We know that half a pound of salt goes in to the tank at at rate of 6 gallons per minute. So that means $R_{in}$ is $\frac{1}{2} \frac{lb}{gal} * 6 \frac{gal}{min}$. $R_{out}$ is a bit more tricky. Considered that we are trying to find how much salt is leaving the tank. Since there is a 100 gallon of fluid, we know that $A$, our variable representing the amount of salt in the container is proportional to the total amount of fluid. So $A/100$ or the amount of salt per gallon of fluid. We know that mixture is leaving at at given rate, so $R_{out} = A/100 * 4 gal/min$, the ending differential equation, with the given initial solution is 
+\begin{equation*}
+	\dd{A}{t} = R_{in} - R_{out} = 3 - \frac{4A}{100} \:\:\:, A(0) = 10 
+\end{equation*}
+
+When the rate going out is higher than the rate going in, you have to account for the decrease in fluid. Let $r_{outflow}$ be the rate at which fluid leaves the tank (difference between $R_{in}$ and $R_{pump}$), $R_{pump}$ is how much the solution is leaving.  
+\begin{equation*}
+	R_{out} = \frac{A}{T_w - r_{outflow}} \times R_{pump}
+\end{equation*}

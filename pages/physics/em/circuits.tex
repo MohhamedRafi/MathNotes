@@ -1,0 +1,119 @@
+\chapter{Circuits}
+Each circuit combination has different behavior, though they are connected pretty closely. This is due to how the behavior of some components interact with other components. Mostly how these components change the behavior of currents. Some circuits would need a good review of spring motion, but not really required. 
+
+
+\section{Kirchhoff's Junction and Loop Rules}
+\section{RC Circuits}
+
+\pagebreak
+\section{RL Circuits}
+Let's look at the circuit below to develop ideas of how the RL circuit works. We already know that the inductor will help prevent a rapid change in current. So when the switch changes from open to begin, the current can't change from it's zero value to it's final value in a instant. If this happened then the change in current through the inductor would be infinite, and the voltage through the inductor would be infinite as well.
+
+\pic{cbe5.png}{RL Circuit}{fv1}{0.55}
+
+We first start with the loop rule for voltages, 
+\begin{equation*}
+	\EMF - iR - L\dd{i}{t} = 0
+\end{equation*}
+Solve for the change in current, 
+\begin{equation*}
+	\dd{i}{t} = \frac{\EMF}{L} - \frac{R}{L}i
+\end{equation*}
+Now we can start considering the position of the switches. We know at the start, $i=0$, so there wouldn't be any voltage through the resistor. But that doesn't mean the inductor's voltage is zero as well. Remember the voltage through the inductor depends on the change in the current through the inductor. As you can see from the equation, 
+\begin{equation*}
+	\dd{i}{t}_{initial} = \frac{\EMF}{L}
+\end{equation*}
+From the second part of the equation, we know when the current increases, the resistance over inductance term will increase as well. So the rate of increasing current is actually going to decrease. Meaning that the current will reach a steady state value later in time. Which in turn means that the change in current will be zero later in time as well.
+\begin{align*}
+	\dd{i}{t} = \frac{\EMF}{L} - \frac{R}{L}i = 0 \\ 
+	I = \frac{\EMF}{R}
+\end{align*}
+We gathered the final current $I$. This result makes sense. It doesn't depend on the inductor at all because the change in current is zero. Meaning the voltage across the inductor would be zero as well. 
+
+
+\subsection{Current Growth: Closing the Switch}
+If we solve the differential equation, from time $t_0 = 0$, where we closed the switch,
+\begin{equation*}
+	i = \frac{\EMF}{R}(1-e^{-e(R/L)t})
+\end{equation*}
+We note that the time constant is $\tau=L/R$
+
+\subsection{Current Decay: Opening the Switch}
+We note that when the switch is closed after a long time, we get our final current value. The second we open the switch, we redefine that time to be $t_0 = 0$, the moment we open the switch. The current can't change instantly, so we know that at $t_0$ the current would be the $I_{final}$.
+\begin{equation*}
+	i = I_{final}e^{-Rt/L}
+\end{equation*}
+
+\subsection{Voltage Growth and Decay}
+It would make sense that the voltage growth and decay would also follow the same time scale.
+Since the voltage growth across the resistor is equal to,
+\begin{equation*}
+	V_r = iR = \frac{\EMF}{R}(1-e^{-t/\tau})R=\EMF(1-e^{-t/\tau})
+\end{equation*}
+and decay would be equal to 
+\begin{equation*}
+	V_r = iR = I_{final}e^{-Rt/L}R = V_{final}e^{-t/\tau}
+\end{equation*}
+The voltage decay through the inductor is defined to be, 
+\begin{align*}
+	V_L = L\dd{i}{t} = L\frac{\EMF}{L}e^{-t/\tau}=\EMF e^{-t/\tau}
+\end{align*}
+As you can see the inductor's voltage is actually decreasing from the moment we closed the switch.
+\begin{equation*}
+	V_L = L\dd{i}{t} = -V_{final}e^{-t/\tau}
+\end{equation*}
+The voltage is still decreasing from when the switch was closed for a long time to it being open. A trend that should be noticed is that the $V_final$ will typically equal the $\EMF$. But do note this is for a single resistor and inductor configuration, you have to consider the other remaining resistors and inductors in a multi-RL component circuit. 
+
+
+\section{LC-Circuits}
+So LC circuits behavior differs greatly from the RL and RC circuits before. We first consider what happens when the capacitor discharges. The capacitor discharges but it can't do instantly so the current starts from 0 to some final value. This means that if there is an inductor connected, the that inductor will experience a change in current, creating an induced emf. This induced emf will be in the opposite direction of the current being discharged from the capacitor. Meaning the capacitor will actually be reversed in polarity  because a current is charing it in the reverse direction. And the process happens again, the capacitor and inductor will oscillate back and forth between each other. We call this  undamped electrical oscillation because there is no loss in energy.
+
+\subsection{Equation of Oscillation}
+Solving the loop equation gives us a second order linear differential equation, which is in terms of charge (because $i = \dd{q}{t}$). We note this equation,
+\begin{equation*}
+	q = Q\cos(\omega t + \phi )
+\end{equation*}	
+where $\omega$ is the angular frequency of the oscillation, and $\phi$ is the phase angle that depends on the initial conditions. Note that the angular frequency is terms of rads/second. It's not regular frequency which is cycles per second.
+\begin{equation*}
+	\omega = \frac{1}{\sqrt{LC}} \to f = \frac{1}{2\pi\sqrt{LC}}
+\end{equation*}
+We can take it's derivative to find the current oscillation, 
+\begin{equation*}
+	i = -\omega Q\sin(\omega t + \phi)
+\end{equation*}
+The phase angle value can be determine by the initial condition. If at $t=0$, the capacitor has it's maximum charge (it's fully charged), then we know that the current has to be zero. So the phase angle at this point would be zero. If the charge is zero, the capacitor is uncharged, a non-zero current value, then the phase angle is $\pm \frac{\pi}{2}$.
+
+\subsection{Energy of Oscillation}
+Since there is no lose in energy, the oscillation will happen forever. What happens is the energy gets transfered between the capacitor and inductor. We know that the maximum energy is going also be equal to energy in the capacitor when it's fully charged. It then will be equal to the sum of the energy of the inductor and the capacitor with dependence on the charge at specific times. 
+\begin{equation*}
+	\frac{1}{2}Li^2 = \frac{q^2}{2C} = \frac{Q^2}{2C}
+\end{equation*}
+
+\section{LRC Circuit}
+LRC circuits take into account of every circuit component we have. Like LC circuits, we have an electric oscillation but unlike that oscillation we have a damping factor. The resistor in the circuit will cause the energy loss. There are two different types of damping when we talk about the LRC circuit. 
+
+First is the \textbf{over-damping}, when this occurs (large values of R), the oscillation doesn't occur at all. It's just an exponential decay. 
+\pic{cbe6.png}{Over-damped}{fb3}{0.65}
+
+The second is the \textbf{under-damping}, where you start seeing the regular exponential decay oscillation. 
+\pic{cbe7.png}{Under-damping}{fb3}{0.65}
+There is a point were you can find the critical damp value. At this point, you start to see no oscillation at all and it marks the border between the oscillation and no oscillation.
+
+\subsection{Equation of Current}
+By using the loop rule we can develop the equations of current and charge for the LRC circuits. 
+\pic{cbe8.png}{LRC}{fbe45}{0.65}
+First we consider the switch to first be closed in position $d$. This allows the capacitor to gain the max charge of the emf. We note that the charge value is equal to $Q=C\EMF$, when after this happens we open the switch to close it at position $a$. This disconnects the emf source, and now we have a circuit that is just the inductor, capacitor, and resistor. 
+By the loop rule, 
+\begin{equation*}
+	-iR - L\dd{i}{t} - \frac{q}{C} = 0 
+\end{equation*}
+whose, solution in terms of the charge is, 
+\begin{equation*}
+	q = Ae^{-t/2\tau}\cos(\sqrt{\frac{1}{LC}+\frac{1}{4\tau^2}t} + \phi)
+\end{equation*}
+$A$ and the phase angle are determine by initial conditions. For example, if the capacitor is at max charge at time $t=0$, then $A=Q_{max}$ and the phase angle would be zero.
+The angular frequency of the under-damped oscillation, 
+\begin{equation*}
+	\omega = \sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}}
+\end{equation*}
+When the square root terms cancel each other, or when $R=\sqrt{4L/C}$, the critical damping occurs, and you will see no more oscillation. 

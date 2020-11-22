@@ -1,0 +1,61 @@
+\chapter{FTC: Generalized}
+
+With all these types of derivatives and integrals, it would be better to organize the notes for all the theorems of calculus in one place. Note, I don't think it will be example heavy, as these theorems are pretty simple to understand. 
+
+\section{Fundamental Theorem of Line Integrals: Gradient Theorem}
+Before we define what the FTC is for line integrals, we have to consider path independence. Path independence is kind of funny to think about without a physical analogy. Work is the best case for this. If there is no friction in a force field, all paths that start at the same place ($A$) and end at the another same place ($B$), then the work done those paths by the field will be the same for all paths from $A$ to $B$. 
+
+\subsection{Path Independence}
+Let's say we have a vector field $\vec{F}$, if that field is a gradient field then it will be a conservative vector field. That's the strange thing, because this implies that there won't be any curl within the field for the most part in $\mathbb{R}^3$. If there is a hole though (places were something is undefined), you could have a curl free vector field. Really the best test would be to quickly do a closed loop line integral around the vector field. If it yields zero, because using the work example, there is no displacement from where you started and ended.
+
+\definition{Potential Function}
+{
+	A vector field has a potential function if that said function's gradient field is the vector field itself. 
+	\begin{equation*}
+		\vec{\mathrm{F}} = \vec{\nabla}\mathbf{f}
+	\end{equation*}
+	This means that $\vec{\mathrm{F}}$ is always parallel to $\vec{\nabla}f$ at all points, so the curl of any point in $\vec{\mathrm{F}}$ will always be zero.
+	\begin{equation*}
+		\vec{\nabla} \times \vec{\mathrm{F}} = \vec{0}.
+	\end{equation*}
+}
+
+\vspace{30pt}\subsection{Finding the Potential Function}
+Finding a potential function isn't a clear algebraic process. Consider $\vec{\mathrm{F}}$, where it's a gradient field of some function.
+\begin{equation*}
+	\vec{\mathrm{F}} = \vec{\nabla}f 
+\end{equation*}
+We know that $F_{x_i}$ will equal the gradient functions' component. We then have a relationship with something like this.
+\begin{equation*}
+	\pdi{f}{x} = {\mathrm{F}}_x 
+\end{equation*} 
+We solve it like a simple differential equation, 
+\begin{align*}
+	\partial f &= \int \mathrm{F}_x \: \mathrm{d}x \\
+	\partial f &= f_x + H(y,z)
+\end{align*}
+We are left with the function $H(y,z)$ because we have three cases that it could be due to it being a partial derivative. It can be a constant, a variable of y, or a variable of z. So we aren't done yet.
+\begin{equation*}
+	\pdi{}{y} (f_x + H(y,z)) = F_y
+\end{equation*}
+Because it's a potential function, the y component of the vector field will be equal to the partial derivative with respect to y. Solve for the $H(y,z)$ and integrate with respect to $y$, and you will be left with a function of $H(z)$ that you will have to find again by using the $F_z$ component.
+
+\vspace{5pt}
+Or, you could be like me and consider.. 
+\begin{equation*}
+	\pdi{f}{x} = F_x \:\:\: \pdi{f}{y}=F_y \:\:\: \pdi{f}{z} =F_z 
+\end{equation*} 
+
+If you solved both like a differential equation, you will notice some common terms and uncommon terms. Those uncommon terms are the $H(y,z)$, $H(x,z)$, and $H(y,x)$. So you could easily form the potential function from that.
+
+\subsection{Fundamental Theorem of Line Integrals}
+\definition{FTC: Line Integral}
+{
+	Given a conservative field $\vec{F}$, where $\vec{F} = \vec{\nabla}\mathbf{f}$, the line integral between the two points, $A$ and $B$ of a curve $C$ are equal to the potential function at those points. 
+
+	\begin{equation*}
+		\int_C \vec{F} \cdot \: \mathrm{d}\vec{r} = f(\vec{r}(B)) - f(\vec{r}(A))
+	\end{equation*}
+}
+\pagebreak
+\section{Stokes' Theorem}

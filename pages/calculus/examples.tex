@@ -1,0 +1,64 @@
+\chapter{Examples}
+These are some interesting problems I found, and the notes and mistakes I had with them. There is no
+real order to how the notes are placed. I could be making mistakes on interpreting these problems so these notes are subjected to change.
+
+\section{E\&M: $\vec{\nabla}$ Operator}
+
+Consider that you had $\vec{\ell}$ which represent the separation vector between two points. Note how the $\vec{\nabla}$ operator functions on the different versions of $|\ell|^{n}$.
+
+	{
+		\begin{align*}
+			|\ell|^{n} &= \sqrt{(x-x')^2+(y-y')^2+(z-z')^2}^n \\ 
+		\end{align*}
+		When we apply the $\nabla$, we consider first the components
+		\begin{align*}
+			\frac{\partial\ell}{\partial\mathrm{x}} &= (\frac{n}{2})({(x-x')^2+(y-y')^2+(z-z')^2})^{\frac{n}{2} - 1}2(x-x') \\
+			\frac{\partial\ell}{\partial\mathrm{x}} &= (n)({(x-x')^2+(y-y')^2+(z-z')^2})^{\frac{n}{2} - 1}(x-x') \\
+			\frac{\partial\ell}{\partial\mathrm{x}} &= (n)\frac{({(x-x')^2+(y-y')^2+(z-z')^2})^{\frac{n}{2}}(x-x')}{(x-x')^2+(y-y')^2+(z-z')^2} \\
+			\frac{\partial\ell}{\partial\mathrm{x}} &= (n)\frac{\ell^{n}}{\ell^2}(x-x') \\
+			\frac{\partial\ell}{\partial\mathrm{x}} &= (n)\ell^{n-1}\frac{(x-x')}{\ell}
+		\end{align*}
+		Since the first part is just a scaler, the second part can be rewritten as $\hat{\ell_x}$
+		We end up with this statement for $\nabla$ operators:
+		\begin{equation*}
+			\vec\nabla{|\ell|^{n}} = n|\ell|^{n-1}\hat{\ell}
+		\end{equation*}
+		It looks sort of like how a regular derivative operates. But there is a quicker way to get to the same conclusion.
+		\begin{align*}
+			\vec\nabla{|\ell|^{n}} = n|\ell|^{n-1}\pdi{\ell}{x_i} 
+		\end{align*}
+		Note the implicit differentiation with the $\nabla$, the only thing left to is evaluate the 
+		$\pdi{\ell}{x_i}$.
+		\begin{align*}
+			\pdi{{\ell}}{x} &= \pdi{\null}{x}((x-x')^2 + ... + (x_i + x'_i)^2)^{\frac{1}{2}} \\ 
+			\pdi{{\ell}}{x} &= ((x-x')^2 + ... + (x_i + x'_i)^2)^{\frac{1}{2}-1}(x-x') \\ 
+			\pdi{{\ell}}{x}	&= \hat{\ell_x}
+		\end{align*}
+		Leading you to the final conclusion of:
+		\begin{equation*}
+			\vec\nabla{|\ell|^{n}} = n|\ell|^{n-1}\hat{\ell}
+		\end{equation*}
+	}
+
+\section{Surface Integrals}
+Evaluate $\iint_\Sigma \vec{F} \cdot \: \mathrm{d}\vec{\Sigma}$, where $\vec{F} = xy\hat{i}-2y\hat{j}+3x\hat{k}$, and $\Sigma$ is the sphere with an outward orientation. Since it's a sphere, we have to parameterize the sphere using spherical coordinates.
+\begin{equation*}
+	\vec{\upphi}(\theta,\phi) = \langle\sin{\theta}\cos{\phi},\sin{\theta}\sin{\phi},\sin{\phi}\rangle
+\end{equation*}
+When we take the cross,
+\begin{equation*}
+	\vec{\upphi}_{cross}(\theta,\phi) = -4\sin^2{\phi}\cos\theta\hat{i}-4\sin^2{\phi}\sin\theta\hat{j} - 4\sin{\phi}\sin{\theta}\hat{k}
+\end{equation*}
+When we consider the normal, we note that since all components are negative, meaning the normal has an inward orientation. We wanted to be outwards, so we take $-\vec{\upphi}_{cross}(\theta,\phi)$. 
+The bounds for the surface is 
+\begin{align*}
+	0 &\leq \theta \leq 2\pi \\  
+	0 &\leq \phi 	\leq 2\pi 
+\end{align*}
+Now we set up the surface integral by first parameterizing the vector field, 
+\begin{equation*}	\vec{F}(\vec\upphi) = \sin^2{\theta}\cos{\phi}\sin{\phi}\hat{i} - 2\sin{\theta}\sin{\phi}\hat{j}  + 3\sin{\theta}\cos{\phi}\hat{k} 
+\end{equation*}
+Now we can setup the surface integral,
+\begin{equation*}
+	\int_0^\pi\int_0^{2\pi} (\sin^2{\theta}\cos{\phi}\sin{\phi}\hat{i} - 2\sin{\theta}\sin{\phi}\hat{j}  + 3\sin{\theta}\cos{\phi}\hat{k}) \: \cdot (-4\sin^2{\phi}\cos\theta\hat{i}-4\sin^2{\phi}\sin\theta\hat{j} - 4\sin{\phi}\sin{\theta}\hat{k}) \: \mathrm{d}\theta\mathrm{d}\phi 
+\end{equation*}

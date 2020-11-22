@@ -1,0 +1,147 @@
+\chapter{First Order Differential Equations}
+
+\section{Separable Equations}
+Separable equations are the simplest first order equations to solve. A separable equation $y'$ is ensure to have terms that can be separated into factors. Since these are meant to be separate, we can just leave it in normal form and solve it by integration. 
+
+\begin{align*}
+	y' &= g(x)h(y) \\ 
+	h(y)^{-1} \frac{\mathrm{d}y}{\mathrm{d}x} &= g(x) \\ 
+	\int \frac{1}{h(y)} \frac{\mathrm{d}y}{\mathrm{d}x} \: \mathrm{d}x &= \int g(x) \: \mathrm{d}x \\ 
+	H(y) &= G(x) + C
+\end{align*}
+
+Now it step 3, the reason why the derivative and the differential $dx$ cancels out is because if $y=f(x)$
+is some solution, then $h(f(x))^{-1}f'(x) = g(x)$. This condition is imposed from u-sub method of solving integration. And so looking at step 3 again, noting that $f'(x)\mathrm{d}x = \mathrm{d}y$
+\begin{align*}
+	\int \frac{1}{h(f(x))}f'(x)  \: \mathrm{d}x &= \int h_1(y) \: \mathrm{d}y
+\end{align*} 
+
+\subsection{Losing A Solution}
+Like in algebra, regular solutions can be lost by dividing out a function. For example, take this differential equation, 
+\begin{equation*}
+	\dd{y}{x} = y^2-4 
+\end{equation*}
+The solutions $y=2,-2$ are constant solutions to the equation. But if you solve the equation, you get something like this, 
+\begin{equation*}
+	y = 2 \frac{1+ce^{4x}}{1-ce^{4x}}
+\end{equation*} 
+Notice how you can get 2 back from the equation but not negative 2. Since, they are constant solutions, you can get $2$ from any $x$ value, but the $-2$ is impossible to get from the solution. So you lost a solution by dividing it out. 
+\section{Autonomous Differential Equations}
+Autonomous equations are differential equations that just dependent on the dependent variable. For example, 
+\begin{equation*}
+	\dd{y}{x} = y \ln (y+2)
+\end{equation*} 
+The issue with autonomous differential equations is that they can be pretty difficult to solve. We can construct graphical solutions to the differential equation. So instead, we can try developing what sketch of the graphical solution. What we first do is consider the critical points of the differential equation, I.E, where the differential equation is equal to zero. You can use this to create a phase line of the equation.
+\pagebreak
+\section{First Order Linear Differential Equations}
+Classification of differential equations in linearly are when the $y$, dependent variable, is a linear variable. Meaning that it isn't a function of some exponential, log, or trig, function. First order linear equations are in standard form of,
+\begin{equation*}
+	\dd{y}{x} + p_1(x)\mathrm{y} = p_2(x)
+\end{equation*}
+We assume that for a non-trivial case, $p_2$ is a non-zero function of $x$. If it was, then the equation would just become a separable equation. 
+\subsection{General Solution to First Order Linear Differential Equations}
+Consider the above equation, it's not separable in a non-trivial case. We are going to have to transform the left-hand side into a form that would be considered separable. Let's call this transforming function, $v(x)$, the integration factor.
+\begin{equation*}
+	v(x)(\dd{y}{x}+p_1(x)y) = v(x)p_2(x)
+\end{equation*}
+If the integration factor actually separates the function as we wanted it to, we impose this condition on the left-hand side,
+\begin{align*}
+	\frac{\mathrm{d}}{\mathrm{dx}} (v(x) \times y) &= v(x)(\dd{y}{x}+p_1(x)y) = v(x)p_2(x) \\ 
+	\frac{\mathrm{d}}{\mathrm{dx}} (v(x) \times y) &= v(x)p_2(x)
+\end{align*}
+The last part gives us a separable differential equation, and doing our integration on both sides with respect to $x$, gives us the final general solution.
+\begin{equation*}
+	y = \frac{1}{v(x)}\int v(x)p_2(x) \: \mathrm{d}x 
+\end{equation*}
+\subsection{Integration Factor}
+The integration factor, $v(x)$, can be found by taking the left-hand condition that we imposed and solving for $v$.
+\begin{align*}	
+	\frac{\mathrm{d}}{\mathrm{dx}} (v(x) \times y) &= v(x)(\dd{y}{x}+p_1(x)y) \\ 
+	v'y+y'v &= vy' + p_1vy \\ 
+	v' &= p_1v \\ 
+	v &= e^{\int p_1 \: \mathrm{d}x}
+\end{align*}
+The constant in the integration factor cancels out, so we only worry about the constants in the other integration in the general solution.
+\subsection{Singular Points and Transient Terms}
+The reason why we can consider the general solution to the first order linear equation to be a general solution is because we have conditions that make it so. Consider the standard form, solving it means that we have to make sure $p_1(x)$ is continuous. Discontinuous points will carry throughout the all the solutions if $p_1$ is discontinuous. That's also because of the integration factor, since $p_1$ is what is being used to transform the equation into a separable equation. Points where $p_1$ are discontinuous are considered to be \textbf{singular points}, and should be used to determine the interval of solution.
+Consider this solution to a differential equation, 
+\begin{equation*}
+	y = ax + Ce^{-x}
+\end{equation*} 
+As $\lim_{x\to\infty}$, the function takes on the value of $ax$, the other term doesn't matter. 
+$Ce^{-x}$ is what's called a \textbf{transient term}. 
+
+\pagebreak
+\section{Exact Differential Equations}
+Recall what a differential is, 
+\begin{equation*}
+	\mathrm{dz} = \pdi{f}{x}\mathrm{dx}+\pdi{f}{y}\mathrm{dy}
+\end{equation*}
+Now let's say we have a function $f(x,y) = C$, where $C$ is some constant over $\mathbb{R}$, then the differential of $f$, would be 
+\begin{equation*}
+	0 = \pdi{f}{x}\mathrm{dx}+\pdi{f}{y}\mathrm{dy}
+\end{equation*}
+Now this makes it interesting, as since we gone from having a function $f(x,y)$ to a differential, we could take that differential and go backwards to find $f(x,y)$, I.E a solution to a differential equation. But before we can go backwards, we have to make sure equation is \textbf{exact}. Exact equation refers to a differential equation that has a corresponding differential of a function. Meaning if $f(x,y)$ was able to construct a differential $\mathrm{df}$, that $\mathrm{df}$ would be considered an exact differential, so it's differential equation will be able to yield $f(x,y)$ going backwards.
+\subsection{Proof of Exact Equation Condition}
+To show that a differential equation and a function's differential is exact, consider, 
+\begin{equation*}
+M(x,y)\mathrm{dx} + N(x,y)\mathrm{dy} = \pdi{f}{x}\mathrm{dx}+\pdi{f}{y}\mathrm{dy}
+\end{equation*}
+We consider the $M(x,y)$ to equal $\pdi{f}{x}$ and same thing for $N(x,y)$ to $\pdi{f}{y}$. We impose the condition that $\pdi{M}{y}$ will equal $\pdi{N}{x}$. Now this is the condition to determine if an equation is exact or not because if this statement wasn't true, it would impossible for anyone get $f(x,y)$. Note, this requires, the partials to be continuous, otherwise, the mixed partials wouldn't always equal each other.
+\subsection{Connection to Conservative Functions}
+To actually solve Exact equations, you use the same method to find the potential function from conservative functions. This makes sense if you think about it. The $\mathrm{df}$ and $\vec{\mathrm{F}} = \nabla f$ are both differentials. If the condition is that conservative functions all have potential functions, that means that a differential $\nabla f$ has a $f(x,y)$ that you can get. Meaning exactness and conservative functions have the same condition, $\nabla \times \vec{\mathrm{F}} = 0$. 
+\pagebreak
+\subsection{Transforming an Differential into An Exact Differential}
+Let's consider a non-exact differential. To transform it, we do the same process as the integration factor. 
+\begin{equation*}
+	\pdi{M}{y} \neq \pdi{N}{x}
+\end{equation*}
+Assume $\mu(x,y)$ is a function that transforms a component of that differential into a exact component. That means $ \pdi{}{y}(\mu(x,y) \times M) = \pdi{}{x}(\mu(x,y) \times N)$. This statement makes sense, as if it was an exact transformer, applying to both functions should yield the same thing. 
+\begin{align*}
+	\pdi{}{y}(\mu(x,y) \times M) &= \pdi{}{x}(\mu(x,y) \times N) \\ 
+	\pdi{\mu}{y}M + \pdi{M}{y}\mu &= \pdi{\mu}{x}N + \pdi{N}{x}\mu \\ 
+	\pdi{\mu}{x}N - \pdi{\mu}{y}N &= \mu(\pdi{M}{y} - \pdi{N}{x})
+\end{align*}
+Notice how this becomes a partial differential equation, which we can't solve with any techniques we know of right now. We make the assumption to simplify our case by making $\mu$ a single variable function of either $x$ or $y$.
+When we assume $x$ as our independent variable for $\mu$, then some of the partials cancel out. 
+\begin{align*}
+	\dd{\mu}{x}N &= \mu(\pdi{M}{y} - \pdi{N}{x}) \\ 
+	\frac{1}{\mu} \dd{\mu}{x} &= \frac{1}{N}(\pdi{M}{y} - \pdi{N}{x}) \\  
+	\mu &= e^ { \int\frac{1}{N}(\pdi{M}{y} - \pdi{N}{x}) \: \mathrm{dx}} 
+\end{align*}
+The process is the same for the assumption when $\mu$ is only in terms of $y$.
+
+\pagebreak
+\section{Solving Differential Equations Using U-Subs}
+This section goes over types of equations that we can solve using subs.
+
+\subsection{Homogeneous Coefficients}
+Given a function $f(x,y)$, where we can rewrite it as $f(tx,ty) = t^\alpha f(x,y)$, that function is considered to have homogeneous coefficients of degree $\alpha$. Now consider a first order differential equation in differential form, 
+\begin{equation*}
+	M(x,y)\mathrm{dx} + N(x,y)\mathrm{dy} = 0  
+\end{equation*}
+where $M$ and $N$ have homogeneous coefficients of the same degree $\alpha$. We can preform a sub of $y=xu$ or $x=vy$ on the equation to turn it into, 
+\begin{equation*}
+	x^\alpha M(1,u) \mathrm{dx} + x^\alpha N(1,u)\mathrm{dy} = 0
+\end{equation*} 
+or 
+\begin{equation*}
+y^\alpha M(v,1) \mathrm{dx} + y^\alpha N(v,1)\mathrm{dy} = 0
+\end{equation*}
+The homogeneous coefficients cancel out. Leaving us with the differential in terms of $u$ or $v$.
+Then by subing in the differential $\mathrm{dy} = u\mathrm{dx} + x\mathrm{du}$ or $\mathrm{dx} = v\mathrm{dy} + y\mathrm{dv}$, you get something like this,
+\begin{equation*}
+	M(1,u) \mathrm{dx} + N(1,u)\mathrm{dy}[u\mathrm{dx} + x\mathrm{du}] = 0 
+\end{equation*}.
+At this point, this function is solvable with the other methods we have learned already.
+\subsection{Bernoulli's Equations}
+Consider this equation, 
+\begin{equation*}
+	\dd{y}{x} + P(x)y= f(x)y^n
+\end{equation*} 
+where $n \neq 0,1$. Preforming a sub of $u=y^{1-n}$ will transform the equation into a first order linear equation. Which you can solve in terms of $u$ and then sub back into y. 
+\subsection{Polynomial in a non-linear function}
+\begin{equation*}
+	\dd{y}{x} = f(Ax + By + C)
+\end{equation*} 
+can be solved using the sub of $u=Ax + By + C$.

@@ -1,0 +1,71 @@
+\chapter{Surface Integrals}
+
+\section{Parameterization of Surfaces}
+We can parameterize a surface or any surfaces using a vector equation.
+
+\begin{equation*}
+	\vec{\upphi}(u,v) = \upphi_x(u,v)\hat{i} +\upphi_y(u,v)\hat{j}+\upphi_z(u,v)\hat{k} 
+\end{equation*}
+
+It makes sense to have two parameters as we can have two "directions" to travel along in any given surface. This is were things get messy, considering the notation of any given surface integral. First step would be to parameterize the surface, using the symbol $\upphi$. Make sure to use this notation because you don't want to confuse the surface parameterization with the field vector.
+
+\section{Surface Integral Over Scaler Field}
+
+I choose to write about this integral's scaler field version because it has some insights into why there isn't really a circulation version of this for surfaces. There is a flux integral, the 3D version of the previous flux integral we have seen, but there isn't a surface integral version of a circulation line integral. 
+
+\definition{Surface Integral (Scaler)} 
+{
+	Given a surface $\Sigma$ over a scaler function $f(x,y,z)$.
+
+	\begin{equation*}
+		\iint_{\Sigma} f(\vec{\upphi}(u,v)) \: \mathrm{d}\Sigma
+	\end{equation*}
+
+	Where $\Sigma$ represents the surface that is being parameterized by $\upphi$. We note the infinitesimal $\mathrm{d}\Sigma$, here as a measure of surface area (like how line integrals have infinitesimals of arc length). Change in surface area of a surface is found by taking the cross product of the partials of $\upphi$. This is because the abs value of the cross product will be the area of a parallelogram. The patch of surface can be represented as the parallelogram, I.E so the area can be represented as the cross product.
+
+	\begin{equation*}
+		\mathrm{d}\Sigma = |\partial_u\upphi \times \partial_v\upphi|\mathrm{d}A
+	\end{equation*}
+} 
+
+The \textbf{MISTAKE} I make is confusing the parametrization and the vector or scaler field equations.
+As when $f(\upphi(u,v))$ that means, $x=\upphi_x(u,v)$.
+
+\subsection{Surface Integrals Over Graphs}
+Given a $f(x,y,z)$ where $z=\upphi(x,y)$, we can write $f(x,y,\upphi(x,y))$. The function is already parameterized by $\upphi$, so now we can try finding the magnitude of the cross product.
+\begin{align*}
+	\vec{\upphi}(x,y) &= x\hat{i} + y\hat{j} + \upphi(x,y)\hat{k} \\ 
+	\partial_x\vec{\upphi} &= \hat{i} + 0\hat{j} + \pdi{\upphi}{x}\hat{k} \\  
+	\partial_y\vec{\upphi} &= 0\hat{i} + 1\hat{j} + \pdi{\upphi}{y}\hat{k} 
+\end{align*}
+The magnitude of the cross will be 
+\begin{equation*}
+	\sqrt{(\pdi{\upphi}{x})^2+(\pdi{\upphi}{y})^2+1}
+\end{equation*}
+Now we get the equation for a surface integral over a graph 
+\begin{equation*}
+	\iint_S f(x,y,\upphi(x,y))	\sqrt{(\pdi{\upphi}{x})^2+(\pdi{\upphi}{y})^2+1} \: \mathrm{d}A
+\end{equation*}
+
+\section{Surface Integral Over Vector Fields}
+This is considered the \textbf{Flux Integral} 3D version. We first have to consider, like the last flux integral, the orientation of a surface. We define the $\hat{n}$ as the normal vector for any point on that surface. If we think of the surface area patch as a parallelogram, the unit normal vector would be 
+${\pdi{\vec{\upphi}}{x} \times \pdi{\vec{\upphi}}{y}}/{|\pdi{\vec{\upphi}}{x} \times \pdi{\vec{\upphi}}{y}|}$. Where the $\vec{\upphi}$ is the parameterization of the surface.
+
+\definition{Flux Integral (3D)}
+{
+	Given a surface that is closed, positively oriented, and smooth, the flux integral over that said surface is defined to be, 
+
+	\begin{equation*}
+		\iint_\Sigma \vec{\mathrm{F}} \cdot \: \mathrm{d}\vec{S}
+	\end{equation*}
+
+	Now the $\mathrm{d}\vec{S}$ is defined to be $\hat{n}\mathrm{d}S$, where $\mathrm{d}S$ is the infinitesimal change in surface area. We already know how surface area is defined for a general parameterized surface, so we can define the $\mathrm{d}\vec{S}$
+
+	\begin{equation*}
+		\mathrm{d}\vec{S} = (\partial_u\vec\upphi \times \partial_v\vec\upphi)\:\mathrm{d}A	
+	\end{equation*}
+	So the surface integral becomes 
+	\begin{equation*}
+		\iint_\Sigma \vec{\mathrm{F}} \cdot \: \mathrm{d}\vec{S} = \iint_\Sigma \vec{\mathrm{F}}(\vec{\upphi(u,v)} \cdot (\partial_u\vec\upphi \times \partial_v\vec\upphi) \:\mathrm{d}A
+	\end{equation*}
+}

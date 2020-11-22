@@ -1,47 +1,74 @@
-\documentclass[a4paper, 10pt, oneside]{article} 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{apacite}
-\usepackage{graphicx}
-\usepackage{indentfirst}
-\usepackage{float}
-\usepackage{amsmath}
-\usepackage{tikz}
-\usepackage{mathdots}
-\usepackage{yhmath}
-\usepackage{cancel}
-\usepackage{color}
-\usepackage{siunitx}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{esvect}
-\usepackage{amssymb}
-\usepackage{gensymb}
-\usepackage{tabularx}
-\usepackage{booktabs}
-\usetikzlibrary{fadings}
-\usetikzlibrary{patterns}
-\usetikzlibrary{shadows.blur}
+\documentclass[oneside]{mathnotes}
+\usepackage{import}
+\usepackage{xcolor}
+\usepackage{ upgreek }
+\usepackage{multicol}
+\usepackage{mathtools}
 
 
+\title{Math Notes}
+\author{Mohhamed Rafi}
 
+\graphicspath{{../MathNotes/pages/images/}}
 
-\includeonly{titlepage, 
-			pages/Calc3/coordinatesystems,
-			pages/Calc3/vector_functions,
-			pages/Calc3/surfaces}
-\graphicspath{/}
+\newcommand{\pdi}[2]{\frac{\partial #1}{\partial\mathrm{#2}}}
+\newcommand\bm[1]{\begin{bmatrix}#1\end{bmatrix}} 
+\newcommand{\diff}[1]{\mathrm{#1}}
+\newcommand{\dd}[2]{\frac{\mathrm{d #1}}{\mathrm{d #2}}}
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\vv}[1]{\vec{\mathrm{#1}}}
+\newcommand{\EMF}{\mathcal{E}}
 
 \begin{document}
-\setlength\parindent{0pt}
-% Include Title Page
-\include{titlepage}
 
-\tableofcontents
-\pagebreak
+	\maketitle
+	\tableofcontents\thispagestyle{fancy}
+	\pagebreak
 
-\include{pages/Calc3/coordinatesystems}
-\include{pages/Calc3/surfaces}
-\include{pages/Calc3/vector_functions}
+	\section*{Notational Notes}
+	I don't use the regular notation for vector derivatives of their components. I find them confusing because sometimes I want to refer to the component by the subscript and not be mistaken for referring to the derivative.
+
+	\begin{enumerate}
+	\item $r'_x$ refers to the vector component of x after a derivative was taken.
+	\item $r_x$ refers to the vector component of x.
+	\end{enumerate}
+	This shouldn't be confused with taking partial derivatives of these vectors. Note, you could still form a vector function with two variables. 
+
+	\begin{equation*}
+		\vec{\phi}(x,y) = \phi_x(x,y)\hat{i} + \phi_y(x,y)\hat{j} + \phi_z(x,y)\hat{k}
+	\end{equation*}
+
+	The partial $\partial_x\phi$ refers to taking the partial derivative with respect to $x$ to all vector components.
+
+
+	% vector calculus
+	\import{pages/calculus/}{line_int}
+	\import{pages/calculus/}{surface_integrals}
+	\import{pages/calculus/}{ftc_theorems}
+	\import{pages/calculus/}{examples}
+	
+	% differential equations
+	\import{pages/differential_equations/}{diff_eq}
+	\import{pages/differential_equations/}{first_order_eq}
+	\import{pages/differential_equations/}{homogeneousequations}
+	\import{pages/differential_equations/}{different_methods}
+	\import{pages/differential_equations/}{laplace_transform}
+	\import{pages/differential_equations/}{apps}
+	
+	% physics 
+	\import{pages/physics/em/}{coulomb_law}
+	\import{pages/physics/em/}{electric_field}
+	\import{pages/physics/em/}{electrostatics_kinematics}
+	\import{pages/physics/em/}{electrical_energy}
+	\import{pages/physics/em/}{electrical_current}
+	% circuits 
+	\import{pages/physics/em/}{magnetic_force}
+	\import{pages/physics/em/}{magnetic_circuits}
+	\import{pages/physics/em/}{em_induction}
+	\import{pages/physics/em/}{inductance}
+	% circuits 
+	\import{pages/physics/em/}{circuits}
+
+
 
 \end{document}

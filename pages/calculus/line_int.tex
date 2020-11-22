@@ -1,0 +1,126 @@
+\chapter{Line Integrals}
+Before we define what a line integral is, we need to consider the derivative operators over 
+a vector field. First we must talk about \textbf{flow}, and how it relates to a vector field. When you drop a leaf into a river, the leaf flows according to the current (motion) of the river. If you define a vector field to represent the motion of said river, you have points in that river that rotate around some points, and other points where the leaf will just follow the flow of the river. I'm only considering the integrals over vector fields. Scaler fields are not as important to me right now and they are honestly pretty simple.
+
+\section{Flow and Circulation, Integral} 
+Consider the unit tangent vector, $\hat{T}$. If we project $\hat{T}$ onto the vector field across some particle's path curve $\mathrm{C}$ on the vector field, we will get the total flow of that particle across that path.
+
+\pic{flow_vec_1.pdf}{Circular Flow}{fv1}{0.25}
+
+The blue tangent vector will be projected onto the field itself, giving an example of flow. Now if we take a line integral over this curve $C$, and apply $\vec{\mathrm{F}} \cdot \hat{\mathrm{T}}$, then we will get whats known as a \textbf{flow integral}. 
+
+\begin{equation*}
+	\int_C \vec{\mathrm{F}} \cdot \mathrm{\hat{T}} \:\mathrm{d}s
+\end{equation*}
+
+Now $\mathrm{d}s$ is a infinitesimal measure of an arc length, so $\mathrm{d}s = |\vec{\mathrm{r'}}(t)|\mathrm{d}t$. That means we can write the flow integral as:
+
+\begin{equation*}
+	\int_C \vec{\mathrm{F}} \cdot \vec{\mathrm{r'}} \:\mathrm{d}t = \int_C \vec{\mathrm{F}} \cdot \:\mathrm{d}\mathrm{r}
+\end{equation*}
+
+
+\definition{Flow Integral}
+{
+	Given a vector field in $\mathbb{R}^n$, where $\vec{\mathrm{F}}$ is such a field, the total flow across some curve $C$ is equal to, 
+	\begin{equation*}
+		\int_C \vec{\mathrm{F}} \cdot \mathrm{\hat{T}} \:\mathrm{d}s = \int_C \vec{\mathrm{F}} \cdot \:\mathrm{d}\vec{\mathrm{r}}
+	\end{equation*}
+
+	If said curve is \textbf{closed}, where $\vec{\mathrm{r}}(b) = \vec{\mathrm{r}}(a)$,
+	then the integral is called a circulation integral,
+
+	\begin{equation*}
+		\oint_C \vec{\mathrm{F}} \cdot \:\mathrm{d}\vec{\mathrm{r}}
+	\end{equation*}
+}
+
+\subsection{Green's Theorem for Flow Integrals}
+\definition{Green's Theorem (P1)}
+{
+	Given a positively oriented, smooth, simple, closed curve that is a boundary to a region, we can relate the 
+	circulation integral to the total internal circulation of that closed region. 
+
+	\begin{equation*}
+		\oint_C \vec{\mathrm{F}} \cdot \:\mathrm{d}\vec{\mathrm{r}} = \iint_{D} {(\vec{\nabla} \times \vec{\mathrm{F}}) \cdot \hat{k} \:\:\mathrm{d}a}
+	\end{equation*}
+}
+
+First, recognize that $\vec{F} \cdot \:\mathrm{d}\vec{\mathrm{r}}$ represents an infinitesimal circulation of the vector field. For example, how much work a vector field does on a particle. Now Green's theorem basically says that is equivalent to total infinitesimal circulation in that region. Now that makes a bit of sense, considering that we know, from the Fundamental Theorem of Calculus, which states 
+
+\begin{equation*}
+	\frac{d}{dx}\int_{c}^{x} f \mathrm{d}t = \frac{d}{dx} (F(x)-F(c)) = f(x) - f(c)	
+\end{equation*} 
+
+The FTC basically relates that the change in area with respect to it's input on an interval is equal to the change in the function itself. Now Green's theorem relates can be seen as a higher version of this FTC. It's right side relates a derivative operation (like FTC's right left side) to an integral, consider the $\vec{\nabla}$ as a derivative operator. You can see it more when the derivative operator of FTC is inside the integral. 
+
+\begin{equation*}
+	\int_{c}^{x}\frac{d}{dx} \textbf{f} \:\mathrm{d}t \to \iint_D (\vec{\nabla} \times \vec{\mathrm{F}})  \cdot 
+	\hat{k} \:\:\mathrm{d}a
+\end{equation*}
+
+\section{Flux (2D)}
+
+The second version of a line integral is the \textbf{Flux Integral}. The flux integral measures the total "flux" out of a curve in a vector field. First look at $\vec{\mathrm{F}} \cdot \hat{n}$, where $\hat{n}$ is the orientation of  the surface. 
+
+\definition{Orientation}
+{
+	If we considered a normal vector to a surface where we can construct a field of $\hat{n}$ that points in the same "general" direction all over the surface, we say that surface is orientable. Now let's considered we have a curve $C=\partial{S}$. If we walk along $C$ with our head in the direction of $\hat{n}$ counterclockwise then the surface will be to our right. That's considered positively orientated.
+	\vspace{5pt}
+
+	The key is thinking about the direction of $\hat{n}$ and if it's counterclockwise or not. If the direction of the normal is positive (outwards), and we are going counterclockwise then the surface will always be on our left hand side. While if we went counterclockwise but the normal was negative (inwards), then the surface will be to our right hand side, meaning that it's negatively orientated.  
+}
+
+Now we can consider the flux:
+\begin{equation*}
+	\vec{\mathrm{F}} \cdot \hat{n} 
+\end{equation*}
+We are projecting the field at that point to the positive normal vector. This will give us a scaler value representing total outward flow from that specific point in that region. Now we can define a flux integral.
+
+\definition{Flux Integral (2D)}
+{
+	\begin{equation*}
+		\int_C \vec{\mathrm{F}} \cdot \hat{n} \: \mathrm{d}s
+	\end{equation*}
+
+	Where $\hat{n}$ is the normal vector to that surface or region. The $\mathrm{d}s$ is an infinitesimal measure of arc length so $|\vec{r'(t)}|dt$, were $\vec{r(t)}$ is the vector function that defines the curve $C$. We will now have to construct $\hat{n}$. For other surfaces, $\hat{n}$ is typical constructed by the $\pdi{\vec{r}}{x} \times \pdi{\vec{r}}{y}$, since you can parameterize with two parameters. But in the planer case, we construct $\hat{n}$ from the cross product of $\hat{T}$ with $\hat{k}$.
+
+	\vspace{5pt}
+	\begin{equation*}
+		\int_C F_x \:\mathrm{d}y - F_y\mathrm{d}x
+	\end{equation*}
+	Where $\mathrm{d}y$ is basically shorthand for $r'_y(t)$.
+}
+
+\subsection{Flux Integral Derivation}
+Now let's try deriving the flux integral equation from above. For planer equations $\hat{n}$ is the cross product between $\hat{T}$ and $\hat{k}$.
+\begin{equation*}
+	\bm{i&j&k \\ \frac{r'_x}{|\vec{r}|}&\frac{r'_y}{|\vec{r}|}&0 \\0&0&1 } = \langle \frac{r'_y}{|\vec{r}|},-\frac{r'_x}{|\vec{r}|},0\rangle
+\end{equation*}
+
+Now let $\vec{\mathrm{F}} = \langle F_x,F_y\rangle$, 
+
+\begin{align*}
+	\int_C \langle F_x,F_y \rangle \cdot \langle \frac{r'_y}{|\vec{r}|},-\frac{r'_x}{|\vec{r}|},0\rangle \: |\vec{r'(t)}| \: \mathrm{d}t \\ 
+	\int_C F_x(r'_y) - F_y(r'_x) \: \mathrm{d}t
+\end{align*}
+
+
+\subsection{Flux Integral: Green's Theorem}
+The thing for simple line integrals is the Green's Theorem part 2. This is for Flux Integrals and it relates the derivative operator of divergence to flux.
+
+\definition{Green's Theorem Part 2}
+{
+	Given a simple, positively oriented, closed boundary curve $C=\partial D$, represented by the vector equation $\vec{r(t)}$, the flux integral inside a vector field $\vec{\mathrm{F}}$ is given by this relationship
+
+	\begin{equation*}
+		\int_C \vec{\mathrm{F}} \cdot \hat{n} \: \mathrm{d}s = \iint_{\partial D} \vec{\nabla} \cdot \vec{\mathrm{F}} \: \mathrm{d}A 
+	\end{equation*}
+
+	Note how this makes sense, the divergence measures how much a field flows out of a point. Sort of like how the flux measures the outward flow from a surface. This is another version (or generalization) of the FTC like before. This does show how there are two different types of derivatives in vector fields. The tangential ones (dot products), and the normal ones (cross products).
+}
+
+
+%\section{Path Independence}
+%\subsection{General Potential Function}
+%\subsection{Fundamental Theorem Of Line Integrals}

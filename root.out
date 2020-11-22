@@ -1,0 +1,125 @@
+\BOOKMARK [0][-]{chapter.1}{Line Integrals}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Flow and Circulation, Integral}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Green's Theorem for Flow Integrals}{section.1.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Flux \(2D\)}{chapter.1}% 4
+\BOOKMARK [2][-]{subsection.1.2.1}{Flux Integral Derivation}{section.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.2.2}{Flux Integral: Green's Theorem}{section.1.2}% 6
+\BOOKMARK [0][-]{chapter.2}{Surface Integrals}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Parameterization of Surfaces}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Surface Integral Over Scaler Field}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{Surface Integrals Over Graphs}{section.2.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Surface Integral Over Vector Fields}{chapter.2}% 11
+\BOOKMARK [0][-]{chapter.3}{FTC: Generalized}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Fundamental Theorem of Line Integrals: Gradient Theorem}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.1.1}{Path Independence}{section.3.1}% 14
+\BOOKMARK [2][-]{subsection.3.1.2}{Finding the Potential Function}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.3}{Fundamental Theorem of Line Integrals}{section.3.1}% 16
+\BOOKMARK [1][-]{section.3.2}{Stokes' Theorem}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Examples}{}% 18
+\BOOKMARK [1][-]{section.4.1}{E\046M: \040Operator}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Surface Integrals}{chapter.4}% 20
+\BOOKMARK [0][-]{chapter.5}{Differential Equations}{}% 21
+\BOOKMARK [1][-]{section.5.1}{Classification of Types}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.2}{Differential Form}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.3}{General Solutions and Unique Solutions}{chapter.5}% 24
+\BOOKMARK [2][-]{subsection.5.3.1}{Interval of Solution}{section.5.3}% 25
+\BOOKMARK [2][-]{subsection.5.3.2}{Family of Solutions}{section.5.3}% 26
+\BOOKMARK [2][-]{subsection.5.3.3}{Existence and Uniqueness Theorem}{section.5.3}% 27
+\BOOKMARK [2][-]{subsection.5.3.4}{General Solution}{section.5.3}% 28
+\BOOKMARK [1][-]{section.5.4}{Initial Value Problems}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.4.1}{Explicit vs Implicit Equations}{section.5.4}% 30
+\BOOKMARK [2][-]{subsection.5.4.2}{Example}{section.5.4}% 31
+\BOOKMARK [0][-]{chapter.6}{First Order Differential Equations}{}% 32
+\BOOKMARK [1][-]{section.6.1}{Separable Equations}{chapter.6}% 33
+\BOOKMARK [2][-]{subsection.6.1.1}{Losing A Solution}{section.6.1}% 34
+\BOOKMARK [1][-]{section.6.2}{Autonomous Differential Equations}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.3}{First Order Linear Differential Equations}{chapter.6}% 36
+\BOOKMARK [2][-]{subsection.6.3.1}{General Solution to First Order Linear Differential Equations}{section.6.3}% 37
+\BOOKMARK [2][-]{subsection.6.3.2}{Integration Factor}{section.6.3}% 38
+\BOOKMARK [2][-]{subsection.6.3.3}{Singular Points and Transient Terms}{section.6.3}% 39
+\BOOKMARK [1][-]{section.6.4}{Exact Differential Equations}{chapter.6}% 40
+\BOOKMARK [2][-]{subsection.6.4.1}{Proof of Exact Equation Condition}{section.6.4}% 41
+\BOOKMARK [2][-]{subsection.6.4.2}{Connection to Conservative Functions}{section.6.4}% 42
+\BOOKMARK [2][-]{subsection.6.4.3}{Transforming an Differential into An Exact Differential}{section.6.4}% 43
+\BOOKMARK [1][-]{section.6.5}{Solving Differential Equations Using U-Subs}{chapter.6}% 44
+\BOOKMARK [2][-]{subsection.6.5.1}{Homogeneous Coefficients}{section.6.5}% 45
+\BOOKMARK [2][-]{subsection.6.5.2}{Bernoulli's Equations}{section.6.5}% 46
+\BOOKMARK [2][-]{subsection.6.5.3}{Polynomial in a non-linear function}{section.6.5}% 47
+\BOOKMARK [0][-]{chapter.7}{Homogeneous Equations}{}% 48
+\BOOKMARK [1][-]{section.7.1}{Notational Differential Operators}{chapter.7}% 49
+\BOOKMARK [1][-]{section.7.2}{Superposition Principle}{chapter.7}% 50
+\BOOKMARK [2][-]{subsection.7.2.1}{Proof of Principle}{section.7.2}% 51
+\BOOKMARK [0][-]{chapter.8}{Numerical Methods of Solving Differential Equation}{}% 52
+\BOOKMARK [1][-]{section.8.1}{Euler's Method}{chapter.8}% 53
+\BOOKMARK [1][-]{section.8.2}{Taylor Series Expansion}{chapter.8}% 54
+\BOOKMARK [0][-]{chapter.9}{Laplace Transform}{}% 55
+\BOOKMARK [1][-]{section.9.1}{Laplace Transform Integral}{chapter.9}% 56
+\BOOKMARK [2][-]{subsection.9.1.1}{Conditions For Existence}{section.9.1}% 57
+\BOOKMARK [2][-]{subsection.9.1.2}{Laplace Inverse Transform}{section.9.1}% 58
+\BOOKMARK [1][-]{section.9.2}{Volterra Integral Equation}{chapter.9}% 59
+\BOOKMARK [0][-]{chapter.10}{Differential Equation Applications}{}% 60
+\BOOKMARK [1][-]{section.10.1}{Growth and Decay}{chapter.10}% 61
+\BOOKMARK [2][-]{subsection.10.1.1}{Simple Growth and Decay}{section.10.1}% 62
+\BOOKMARK [2][-]{subsection.10.1.2}{Newton's Law of Cooling}{section.10.1}% 63
+\BOOKMARK [2][-]{subsection.10.1.3}{Logistic Growth Models}{section.10.1}% 64
+\BOOKMARK [1][-]{section.10.2}{Mixtures and Physics Applications}{chapter.10}% 65
+\BOOKMARK [2][-]{subsection.10.2.1}{Mixtures}{section.10.2}% 66
+\BOOKMARK [0][-]{chapter.11}{Electrostatics}{}% 67
+\BOOKMARK [1][-]{section.11.1}{Charge By Induction}{chapter.11}% 68
+\BOOKMARK [1][-]{section.11.2}{Coulomb's Law}{chapter.11}% 69
+\BOOKMARK [2][-]{subsection.11.2.1}{Principle of Superposition}{section.11.2}% 70
+\BOOKMARK [2][-]{subsection.11.2.2}{Newton's Third Law}{section.11.2}% 71
+\BOOKMARK [0][-]{chapter.12}{Electric Field}{}% 72
+\BOOKMARK [1][-]{section.12.1}{Introduction}{chapter.12}% 73
+\BOOKMARK [1][-]{section.12.2}{Electric Field Lines}{chapter.12}% 74
+\BOOKMARK [1][-]{section.12.3}{Example: Finding the Zero of Electric Field}{chapter.12}% 75
+\BOOKMARK [1][-]{section.12.4}{Superposition of Charges}{chapter.12}% 76
+\BOOKMARK [2][-]{subsection.12.4.1}{Superposition of Line Charge}{section.12.4}% 77
+\BOOKMARK [1][-]{section.12.5}{Gauss' Law}{chapter.12}% 78
+\BOOKMARK [0][-]{chapter.13}{Electrostatics And Kinematics}{}% 79
+\BOOKMARK [0][-]{chapter.14}{Electrical Energy}{}% 80
+\BOOKMARK [1][-]{section.14.1}{Capacitors}{chapter.14}% 81
+\BOOKMARK [0][-]{chapter.15}{Electrical Current}{}% 82
+\BOOKMARK [1][-]{section.15.1}{Resistors}{chapter.15}% 83
+\BOOKMARK [1][-]{section.15.2}{Ohm's Law}{chapter.15}% 84
+\BOOKMARK [0][-]{chapter.16}{Magnetism}{}% 85
+\BOOKMARK [1][-]{section.16.1}{Magnetic Field}{chapter.16}% 86
+\BOOKMARK [2][-]{subsection.16.1.1}{Properties of the Magnetic Force}{section.16.1}% 87
+\BOOKMARK [2][-]{subsection.16.1.2}{Magnetic Field Lines and Flux}{section.16.1}% 88
+\BOOKMARK [1][-]{section.16.2}{Motion in a Uniform Magnetic Field}{chapter.16}% 89
+\BOOKMARK [0][-]{chapter.17}{Magnetic Force: Current}{}% 90
+\BOOKMARK [1][-]{section.17.1}{Magnetic Forces on Current Loops}{chapter.17}% 91
+\BOOKMARK [1][-]{section.17.2}{Magnetic Torque}{chapter.17}% 92
+\BOOKMARK [2][-]{subsection.17.2.1}{Magnetic Dipole Moment}{section.17.2}% 93
+\BOOKMARK [1][-]{section.17.3}{Potential Energy for Magnetic Dipoles}{chapter.17}% 94
+\BOOKMARK [1][-]{section.17.4}{Biot-Savart Law}{chapter.17}% 95
+\BOOKMARK [2][-]{subsection.17.4.1}{Magnetic Field of a Straight Current-Carrying Conductor}{section.17.4}% 96
+\BOOKMARK [2][-]{subsection.17.4.2}{Magnetic Field of A Coil Loop}{section.17.4}% 97
+\BOOKMARK [2][-]{subsection.17.4.3}{Parallel Conductors}{section.17.4}% 98
+\BOOKMARK [1][-]{section.17.5}{Ampere's Law}{chapter.17}% 99
+\BOOKMARK [2][-]{subsection.17.5.1}{Ampere's Law for Solenoids}{section.17.5}% 100
+\BOOKMARK [2][-]{subsection.17.5.2}{Ampere's Law for Toroidal Solenoid}{section.17.5}% 101
+\BOOKMARK [2][-]{subsection.17.5.3}{Example of Ampere's Law}{section.17.5}% 102
+\BOOKMARK [2][-]{subsection.17.5.4}{Example 2 of Ampere's Law}{section.17.5}% 103
+\BOOKMARK [0][-]{chapter.18}{Electromagnetic Induction}{}% 104
+\BOOKMARK [1][-]{section.18.1}{Faraday's Law}{chapter.18}% 105
+\BOOKMARK [2][-]{subsection.18.1.1}{Lenz's Law}{section.18.1}% 106
+\BOOKMARK [1][-]{section.18.2}{Motional Electromotive Force}{chapter.18}% 107
+\BOOKMARK [2][-]{subsection.18.2.1}{General Form of EMF}{section.18.2}% 108
+\BOOKMARK [1][-]{section.18.3}{Induced Electric Field}{chapter.18}% 109
+\BOOKMARK [0][-]{chapter.19}{Inductance}{}% 110
+\BOOKMARK [1][-]{section.19.1}{Inductors}{chapter.19}% 111
+\BOOKMARK [2][-]{subsection.19.1.1}{Computing Inductance}{section.19.1}% 112
+\BOOKMARK [2][-]{subsection.19.1.2}{Energy Stored In Inductors}{section.19.1}% 113
+\BOOKMARK [0][-]{chapter.20}{Circuits}{}% 114
+\BOOKMARK [1][-]{section.20.1}{Kirchhoff's Junction and Loop Rules}{chapter.20}% 115
+\BOOKMARK [1][-]{section.20.2}{RC Circuits}{chapter.20}% 116
+\BOOKMARK [1][-]{section.20.3}{RL Circuits}{chapter.20}% 117
+\BOOKMARK [2][-]{subsection.20.3.1}{Current Growth: Closing the Switch}{section.20.3}% 118
+\BOOKMARK [2][-]{subsection.20.3.2}{Current Decay: Opening the Switch}{section.20.3}% 119
+\BOOKMARK [2][-]{subsection.20.3.3}{Voltage Growth and Decay}{section.20.3}% 120
+\BOOKMARK [1][-]{section.20.4}{LC-Circuits}{chapter.20}% 121
+\BOOKMARK [2][-]{subsection.20.4.1}{Equation of Oscillation}{section.20.4}% 122
+\BOOKMARK [2][-]{subsection.20.4.2}{Energy of Oscillation}{section.20.4}% 123
+\BOOKMARK [1][-]{section.20.5}{LRC Circuit}{chapter.20}% 124
+\BOOKMARK [2][-]{subsection.20.5.1}{Equation of Current}{section.20.5}% 125

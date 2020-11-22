@@ -1,0 +1,51 @@
+\chapter{Homogeneous Equations}
+A linear $n$-th order differential equation is \textbf{homogeneous} if it takes a form of
+\begin{equation*}
+	H(x,y) = a_n(x)\frac{\mathrm{d}^ny}{\mathrm{d}x^n} + a_{n-1}(x)\frac{\mathrm{d}^{n-1}y}{\mathrm{d}x^{n-1}} + ... + a_1(x)\frac{\mathrm{d}y}{\mathrm{d}x} + a_0(x)y = 0
+\end{equation*}
+A \textbf{non-homogeneous} equation is 
+\begin{equation*}
+	H(x,y) = g(x)
+\end{equation*}
+on a interval where $g(x) \neq 0$. It will be shown that an associated homogeneous equation will need to be solved first before we can solve the non-homogeneous equation. We will make two simple assumptions, one the coefficient functions and $g(x)$ are continuous. The second that $a_n(x) \neq 0$ for all $x$ in a common interval $I$. 
+\section{Notational Differential Operators}
+A differential operator is a operator that turns a differentiable function into a function. That sounds exactly like what we do with the regular differential operator, and the point is that this is the regular differential operator. We let the differential operator $D$ be exactly that.  
+\begin{equation*}
+	D^n\{f(x)\} = f'(x) = \dd{f(x)}{x}
+\end{equation*}
+The properties of differentiation imposes two useful rules. The first is the ability to factor out a constant coefficient outside of the operator.  
+\begin{equation*}
+	cD^n\{f(x)\} = D^n\{c\times f(x)\}
+\end{equation*}
+The second is the sum and difference rule, 
+\begin{equation*}
+	D^n\{ f(x) \pm g(x) \} = D^n\{f(x)\} \pm D^n\{g(x)\}
+\end{equation*}
+These two rules allows us to write the homogeneous expression in terms of a polynomial differential operator. 
+\begin{equation*}
+	\mathrm{L} = a_n(x)D^n + a_{n-1}(x)D^{n-1} + ... + a_1D + a_0(x)
+\end{equation*}
+\pagebreak
+\section{Superposition Principle}
+The sum or superposition of two or more solutions to a homogeneous linear differential equation is also consider to be a solution to a differential equation. This is an interesting concept because it actual limits to the amount of useful solutions we want. Consider that we could super impose solutions that were just multiple factors of each other. That doesn't do much for us, so we could instead super impose just two solutions who are linearly independent of each other.
+
+But let's just consider the simple case, where $\gamma_1, \gamma_2,\gamma_3, ... ,\gamma_n$ are considered to be solutions to a differential equation on some common interval $I$. The linear combination 
+\begin{equation*}
+	y= c_1\gamma_1 + c_2\gamma_2 + c_3\gamma_3 + ... + c_n\gamma_n
+\end{equation*} 
+is considered to be a solution with $c_1 ... c_n$ are considered to be arbitrary constants. We can compactly write this as 
+\begin{equation*}
+	y = \sum_{i=0}^k c_i \gamma_i(x)
+\end{equation*}
+\subsection{Proof of Principle}
+A good way to test the usage of our $\mr{L}$ is using it to prove the superposition principle. Consider the case $k=2$, we let $\mr{L}$ be a polynomial differential operator and let $\gamma_1$,$\gamma_2$ be solutions to the differential equation, expressed in $\mr{L}$,
+\begin{equation*}
+	\mr{L}\{y\}= 0
+\end{equation*}
+We define $c_1\gamma_1 + c_2\gamma_2 = y$ and by linearity, 
+\begin{align*}
+	\mr{L}\{ c_1\gamma_1 + c_2\gamma_2 \} &= \mr{L}\{ y \} = 0 \\ 
+	 c_1\mr{L}\{\gamma_1\}+ c_2\mr{L}\{\gamma_2\} &= 0 \\ 
+	 c_1 \times 0 + c_2 \times 0 &= 0   
+\end{align*}
+Since $\gamma_1$ and $\gamma_2$ are known solutions to $\mr{L}\{y\} = 0$, we know that they evaluate to zero. There by proving our superposition principle. 

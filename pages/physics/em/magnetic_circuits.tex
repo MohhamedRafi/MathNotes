@@ -1,0 +1,217 @@
+\chapter{Magnetic Force: Current}
+We are going to develop several laws and applications for magnetism applied to currents. First we developed a formula that applies to current loops for magnetic forces. We first note what the Lorentz's Force Law states, 
+\begin{align*}
+	\vec{\mathrm{F_b}} &= q\vec{v} \times \vec{\mathrm{B}} \\ 
+	\vec{\mathrm{F_b}} &= q\sum_i\vec{v_i} \times \vec{\mathrm{B}} \\ 
+	\vec{\mathrm{F_b}} &= I\vec{l} \times \vec{\mathrm{B}}
+\end{align*}
+The derivation notes that $N=nAL$ and $I=qnAv_{avg}$. We take the fact that currents are going be always describes by moving charge particles. 
+
+\section{Magnetic Forces on Current Loops}
+Start developing some important ideas. First current loops, we can gather the force from any shaped current loop by this equation, 
+
+\begin{equation*}
+	\vec{\mathrm{F}} = \int_C I\vec{\diff{d\ell}} \times \vec{\mathrm{B}}
+\end{equation*}
+
+This is a line integral result, so it be useful to break it up the loop path into different segments.
+\begin{equation*}
+	|\vec{\mathrm{F}}| = \int_C I\mathrm{B}\sin(\theta) \:\: \diff{d\ell}
+\end{equation*}
+
+This is a general result for any path that describes a current loop that is closed. Any \textbf{closed} current loop that exist within a uniform magnetic field, will have a net force equal to zero.
+\begin{equation*}
+\oint \vec{\diff{dF_b}} = \oint I\vec{\diff{d\ell}} \times \vec{\mathrm{B}} = 0
+\end{equation*}
+\pagebreak
+\section{Magnetic Torque}
+Even though a closed current loop will have a zero net force, the will still be a non-zero torque. Consider the square loop, centered at the origin, current going counterclockwise, in a magnetic field that is pointing to the right. We consider the moment axis to be centered around the origin. Consider the torque from all sides. 
+\begin{equation*}
+	\vec{\tau} = \vec{r} \times \vec{\mathrm{F}}
+\end{equation*}
+\pic{current_loop}{Example Current Loop}{fv1}{0.65}
+First the forces on the current loop. Side 1 will be pointing inwards, while side 3 will be pointing outwards. Sides 2 and 4 will have no force because the currents they are charing will be parallel to the magnetic field. That means the torque we are going to have will be dependent on the vertical sides. The $\hat{r}$ is going to be the position from our moment axis. We choose the moment axis to be centered at the origin. The torque contributed from side 1 will be upwards, because the $\hat{r}$ is point to the left and the $\vec{\mathrm{F}}$ from side 1 is pointing inwards. The torque contributed from side 3 will be upwards as well because $\hat{r}$ will be pointing to the right and the force vector is outwards. The total torque is upwards. 
+\subsection{Magnetic Dipole Moment}
+To simplify our work, we can express the torque from a magnetic field on a current loop by using it's dipole moment. Consider the total magnitude of the torque from the square loop.
+\begin{equation*}
+	\tau = 2(r\mathrm{F})
+\end{equation*}
+We know that $\mathrm{F}=I\mathrm{B}\ell$, where $r$ is $\frac{1}{2}\ell$, the expression becomes 
+\begin{align*}
+	\tau &= 2(\frac{1}{2}\ell)I\mathrm{B}\ell \\ 
+	\tau &= I(\ell)^2\mathrm{B} \\ 
+	\tau &= I(A)\mathrm{B}
+\end{align*}
+We can express the $IA$ to be consider the magnetic dipole moment, and we can express this with the vector form of the dipole moment. 
+\begin{equation*}
+	\tau = \vec{\mu} \times \vec{\mathrm{B}}
+\end{equation*}
+We also consider the amount of loops there is, so we redefined $\mu = IN\vec{\mathrm{A}}$, and the direction of the $\vec{\mu}$ is going to be considered like a normal surface vector.
+\section{Potential Energy for Magnetic Dipoles}
+When you have a current loop in a magnetic field, while the net force by the field is zero, the change in orientation caused by the torque suggest that the field is doing work on the loop. We can derive the equation for potential energy of a dipole by consider the total amount of work done by the torque. We know the work done by a torque is going to be,
+\begin{align*}
+	W &= \int \tau \:\:\diff{\mathrm{d}\theta} \\ 
+	W &= \int | \: \vec{\mu} \times \vec{\mathrm{B}} \: | \:\:\diff{\mathrm{d}\theta}  \\ 
+	W &= \int \mu\mathrm{B}\sin(\theta) \:\:\diff{\mathrm{d}\theta}  \\ 
+	W &= \mu \mathrm{B}\cos(\theta)\\  
+	W &= \vec{\mu} \cdot \vec{\mathrm{B}}
+\end{align*}
+Work stays positive because we are taking the magnitude of the cross, so that's why the integral stays positive. But since we know the change in potential energy is equal to negative work, 
+\begin{equation*}
+	\Delta U = -\vec{\mu} \cdot \vec{\mathrm{B}}
+\end{equation*}
+Where we define, $U_0$ to be when $\mu$ is perpendicular to $\vec{\mathrm{B}}$. Please \textbf{NOTE} that potential energy is "how much stuff might happen" versus work's "how much stuff is happening". When you think about when potential energy is the highest is when $\mu$ is anti-parallel with $\vec{\mathrm{B}}$ because at that point, there is a potential for the field to do work to change it's orientation. 
+\section{Biot-Savart Law}
+We can find the magnitude of a magnetic field caused by a moving charge at a given instant by a source point and a test point in space. This is like how we developed the electric field concept. Experiments and previous observations note that magnetic field from a moving source charge at a given instant is equal to, 
+\begin{equation*}
+	\vec{\mathrm{B}} = \frac{\mu_0}{4\pi} \frac{|q|\vec{v} \times \hat{r}}{r^2} 
+\end{equation*}
+Where $\hat{r}$ is the vector from the source point to the test point. The constant $\mu_0$ is called the magnetic constant, and it has the value of $4\pi \times 10^{-7} T \cdot \mathrm{m} / \mathrm{A}$. We can move this further with general current shapes. Consider a current carrying rod, if we took a segment of length $\diff{\mathrm{d}\ell}$ times it's cross-sectional area $\mathrm{A}$, then times a charged particle per unit volume, $n$, we get the differential for our change in charge, $dQ = nqA\diff{\mathrm{d}\ell}$, 
+\begin{align*}
+	\diff{\mathrm{d}\vec{B}} &= \frac{\mu_0}{4\pi} \frac{|dQ|\vec{v} \times \hat{r}}{r^2} \\ 
+	\diff{\mathrm{d}\vec{B}} &= \frac{\mu_0}{4\pi} \frac{n|q|A\diff{\mathrm{d}\ell}\vec{v}\times\hat{r}}{r^2} \\ 
+	\diff{\mathrm{d}\vec{B}} &= \frac{\mu_0}{4\pi} \frac{I\vec{\diff{\mathrm{d}\ell}} \times \hat{r}}{r^2} 
+\end{align*}
+The final law for the total field is,
+\begin{equation*}
+	\vec{\mathrm{B}} = \frac{\mu_0}{4\pi} \int_C \frac{I\vec{\diff{\mathrm{d}\ell}} \times \hat{r}}{r^2} 
+\end{equation*}
+
+
+
+
+\subsection{Magnetic Field of a Straight Current-Carrying Conductor}
+We use the Biot-Savart Law on a straight current-carrying conductor. 
+\pic{cbe1}{Current Carrying Conductor}{fv1}{0.65}
+We know that $\diff{\mathrm{d}\ell} \times \hat{r}$ is forms a plane along inwards in the straight path of the conductor. That means all the directions of the magnetic filed is going to be the same, so we can just add their magnitudes together. We know that $r=\sqrt{x^2 + y^2}$, $\diff{\mathrm{d}\ell} = I\diff{dy}$, and the $\sin(\pi-\theta) = x\sqrt{x^2+y^2}^{-1}$, forming the integral expression, 
+\begin{equation*}
+	\mathrm{B}=\frac{\mu_0}{4\pi} \int_{-a}^{a} \frac{Ix}{(x^2+y^2)^{3/2}} \:\: \diff{d\ell} 
+\end{equation*} 
+Which simplifies down to, 
+\begin{equation*}
+	\mathrm{B}= \frac{\mu_0I}{4\pi} \frac{2a}{x\sqrt{x^2 + a^2 }}
+\end{equation*}
+When we are very far away from the conductor, or when $a \to \infty$, the expression becomes 
+\begin{equation*}
+	\mathrm{B}= \frac{\mu_0I}{2\pi r}
+\end{equation*}
+
+
+\pagebreak
+\subsection{Magnetic Field of A Coil Loop}
+We are going to use BS's law to develop a formulation for conducting coils. Coils are going to play an important part in later parts. First part, is figuring out the curl of $I\diff{d\ell} \times \hat{r}$. Since we know that the curl will always point in the constant direction, we can just sum of the total magnitude of the $\hat{r}$.
+\pic{cbe4}{Single Loop}{fv1}{0.55}
+We easily can find the magnitude of the infinitesimal, and will just apply the components related to it. Since we know that the $y$-direction will have no magnetic field by way of symmetry, we just can use the cosine.
+\begin{equation*}
+	\diff{dB}\cos\theta = \frac{\mu_0I}{4\pi}\frac{\diff{d\ell}}{(x^2+a^2)} \frac{a}{\sqrt{x^2+a^2}}
+\end{equation*}
+The integral will be defined as this, 
+\begin{equation*}
+	\int \frac{\mu_0I}{4\pi}\frac{\diff{d\ell}}{(x^2+a^2)} \frac{a}{\sqrt{x^2+a^2}} = \frac{\mu_0Ia^2}{2(x^2+a^2)^{3/2}}
+\end{equation*}
+When we are close to the coil (at the center of it), we find the expression simplifies down to 
+\begin{equation*}
+	\mr{B} = \frac{\mu_0IN}{2a}
+\end{equation*}
+where $N$ is the amount of turns the coil has, since we could just stack bunch of coils of infinitesimal loop.
+
+
+\subsection{Parallel Conductors}
+When we consider two rods, $r_1$ and $r_2$, the force felt by the magnetic field produced by both is dependent on their currents. They both feel the force for the other's respect magnetic field. Let's look at the force of $r_1$. The lower rod would produce a magnetic field who's magnitude would be, 
+\begin{equation*}
+	\mathrm{B}= \frac{\mu_0I}{2\pi r} 
+\end{equation*}
+Let $I'$ be the current of the top rod. We can figure out that the force on the top rod by the second rod is equal to,
+\begin{equation*}
+	F_b = I'L\mathrm{B} = I'L \frac{\mu_0I}{2\pi r} 
+\end{equation*}
+Where the force per unit length is just equal to 
+\begin{equation*}
+	F_b = I'\frac{\mu_0I}{2\pi r} 
+\end{equation*}
+Now we have to consider the vector form, 
+\begin{equation*}
+	\vec{\mathrm{F}} = I'\vec{\ell} \times \vec{\mathrm{B}}
+\end{equation*}
+We see if that $I'$ and $I$ share the same direction, the two rods, by the right hand rule, will attract each other. If they have different current directions, the rods will repel each other.
+\section{Ampere's Law}
+Ampere's Law can be used to gather the magnetic field from a single path integral. Like how Gauss's used imagery surfaces, Ampere's Law states that for any closed loop path, the circulation integral will equal the enclosed current in surface created by that path. 
+\begin{equation*}
+	\oint \vec{\mathrm{B}} \cdot \: \diff{d}\vec{\ell} = \mu_oI_{enclosed}
+\end{equation*}
+But of course, like Gaussian surfaces, the loops must exhibit proper symmetries so we can use it. These loops are called Amperian loops. The direction of $\diff{d}\vec{\mathrm{B}}$ and $\diff{d}\vec{\mathrm{s}}$
+should be the same for all segments of the loop. That way you can pull the magnetic field out of the integral and solve for it. 
+\subsection{Ampere's Law for Solenoids}
+Solenoids are another important shape for magnetic fields. If you have an infinite solenoid, you can find that inside the solenoid, the magnetic field would be uniform. The outside of the solenoid would have no magnetic field. The line integral for Ampere's Law would just yield a $BL$ because the $\vv{B}$ inside would just be uniform.
+\begin{equation*}
+	\oint_C \vv{B} \cdot \diff{d}\vv{\ell} = \mr{B}\ell
+\end{equation*}
+For the right-hand side of Ampere's Law, we note that the integration path is a rectangular path that goes inside and outside of the solenoid. The solenoid, we assume, makes a constant amount of turns per length, $n$. That means, if the solenoid carried a uniform charge of $I$, the enclosed amount of charge in that area would be $n\ell I$.
+\begin{equation*}
+ \mr{B} = \mu_0nI 
+\end{equation*}
+\subsection{Ampere's Law for Toroidal Solenoid}
+The toroidal solenoid is another common shape that we can consider. First we note that the surface (and outside) will not have a magnetic field. Because of the winding of solenoid, the current passes through the surface twice, equal in opposite directions. Meaning the net enclosed charge will be zero. The only way we would have a non-zero magnetic field is if we consider the field inside of the toroidal volume. We know that the enclosed amount would be $NI$, where $N$ is the amount of turns (not to be confused with amount of turns per length).
+Solving Ampere's Law will yield,
+\begin{equation*}
+	\mr{B} = \frac{\mu_0NI}{2\pi r}
+\end{equation*} 
+
+
+
+\pagebreak
+\subsection{Example of Ampere's Law}
+A cylindrical conductor with radius $R$ carries a current I.
+The current is uniformly distributed over the cross-sectional area of
+the conductor. Find the magnetic field as a function of the distance r
+from the conductor axis for points both inside ($r < R$) and out side ($r > R)$ the conductor. 
+\pic{cbe2}{Conductor}{fv1}{0.65}
+Let's first consider the inside of the conductor. Consider the picture first, we need to know how much current is in the desired radius. We know that the total current is $I$, the current density $J=I/A$. Where $A = \pi R^2 $, so $J=\frac{I}{\pi R^2}$. 
+\begin{align*}
+	I_{enclosed} = \pi r^2 \frac{I}{\pi R^2} = \frac{r^2}{R^2}I
+\end{align*}
+Let's take the path integral, 
+\begin{equation*}
+	\oint \vv{B} \cdot \diff{d}\vec{\mathrm{\ell}} = \mu_0I_{enclosed}
+\end{equation*}
+Since we know that the $\vec{\mathrm{B}}$ is constant and pointing a constant direction, we can pull it out, and the path integral will just yield the total perimeter (or circumstance in this case). 
+\begin{align*}
+	\mathrm{B} \oint \diff{d\ell} = \mr{B} (2\pi r) &= \mu_0\frac{r^2}{R^2}I \\ 
+	\mr{B} &= \frac{\mu_0}{2\pi}\frac{r}{R^2}I  \:\:\: r < R
+\end{align*}
+The process is the same with $r > R$, but since we know the enclosed charge is just going to be $I$, the expression because much simpler
+\begin{equation*}
+	\mr{B} = \frac{\mu_0}{2\pi}\frac{I}{r}
+\end{equation*}
+The same expression as we got with Biot-Savart Law but with a much faster approach since we had the symmetry.
+\subsection{Example 2 of Ampere's Law} 
+\pic{cbe3}{Conductor}{fv1}{0.65}
+Two very long coaxial cylindrical conductors are shown in cross-section above. The inner cylinder has radius $a$ = $2$ cm and caries a total current of $I_1$ = $1.2$ A in the positive $z$-direction (pointing out of the screen). The outer cylinder has an inner radius $b$ $=$ $4$ cm, outer radius $c$ $=$ $6$ cm and carries a current of $I_2$ $= 2.4$ A in the negative $z$-direction (pointing into the screen). You may assume that the current is uniformly distributed over the cross-sectional area of the conductors. What is $B_x$, the x-component of the magnetic field at point P which is located at a distance $r = 5$ cm from the origin and makes an angle of $30$ degrees with the $x$-axis? 
+
+\vspace{10pt}
+Let's consider the Ampere's Law,
+\begin{equation*}
+	\oint \vv{B} \cdot \diff{d}\vv{\mr{B}} = \mu_0I_{enclosed}
+\end{equation*}
+We choose a path, that is a circle with radius $P$. There is no need to break the integral down if we consider the signs of how currents. We note that the current direction is always given by the cross of $\diff{d\ell}$ and $\hat{r}$. We find that current $I_1$ is going have a positive counterclockwise direction. We find that current $I_2$ is going to have a negative clockwise direction. To properly find the enclosed current, we need to first find the current density of $I_2$.
+\begin{align*}
+	J &= \frac{I_2}{\pi(c^2-b^2)} \\ 
+	I_{2,enc} &= \frac{I_2}{\pi(c^2-b^2)} \pi (r^2-b^2) = \frac{I_2}{(c^2-b^2)}(r^2-b^2)
+\end{align*}
+We know that the total enclosed current will equal, 
+\begin{align*}
+	I_1 - I_{2,enc} 
+\end{align*}
+You would note that we get a positive value, suggesting that $\vv{B}$ will point towards a positive counterclockwise direction, which is important to note when we are finding the $\vv{B}_x$.
+
+We finish Ampere's Law, 
+\begin{align*}
+	\mr{B}(2\pi)r &= \mu_0(I_1 - \frac{I_2}{(c^2-b^2)}(r^2-b^2)) \\ 
+	\mr{B} &= \frac{1}{2\pi r}\mu_0(I_1 - \frac{I_2}{(c^2-b^2)}(r^2-b^2))
+\end{align*}
+We note that the final assumed drawing, 
+\pic{cbe32}{Final Step}{fvb1}{0.65}
+That the angle $\gamma = 90 - \theta$ by geometry. Which gives us our final expression of the $\mr{B}_x$ component. 
+\begin{equation*}
+	\mr{B}_x = -\frac{1}{2\pi r}\mu_0(I_1 - \frac{I_2}{(c^2-b^2)}(r^2-b^2))cos(\gamma)
+\end{equation*}

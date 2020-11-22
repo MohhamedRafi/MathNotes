@@ -1,0 +1,699 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sec",
+				"\\section{title}                                   \tlatex-document"
+			],
+			[
+				"inf",
+				"\\infty                                            \tlatex-mathsymbols"
+			],
+			[
+				"matb",
+				"\\mathbf{text}                                     \tlatex-document"
+			],
+			[
+				"equation",
+				"\\begin{equation}                                  \tlatex-document"
+			],
+			[
+				"subsub",
+				"\\subsubsection[short]{title}                      \tlatex-document"
+			],
+			[
+				"sqr",
+				"\\sqrt[root]{arg}                                  \tlatex-document"
+			],
+			[
+				"enum",
+				"\\end{enumerate}                                   \tlatex-document"
+			],
+			[
+				"equat",
+				"\\begin{equation}                                  \tlatex-document"
+			],
+			[
+				"nu",
+				"\\null                                             \tlatex-document"
+			],
+			[
+				"SQR",
+				"\\sqrt{arg}                                        \tlatex-document"
+			],
+			[
+				"itemiz",
+				"\\begin{itemize}                                   \tlatex-document"
+			],
+			[
+				"vspace",
+				"\\vspace{length}                                   \tlatex-document"
+			],
+			[
+				"lang",
+				"\\langle                                           \tlatex-mathsymbols"
+			],
+			[
+				"se",
+				"\\section*{title}                                  \tlatex-document"
+			],
+			[
+				"tal",
+				"\\tableofcontents                                  \tlatex-document"
+			],
+			[
+				"lbr",
+				"\\lbrack                                           \tlatex-mathsymbols"
+			],
+			[
+				"ap",
+				"\\approx                                           \tlatex-mathsymbols"
+			],
+			[
+				"sqrt",
+				"\\sqrt{arg}                                        \tlatex-document"
+			],
+			[
+				"vec",
+				"\\vec{a}                                           \tlatex-mathsymbols"
+			],
+			[
+				"equati",
+				"\\begin{equation}                                  \tlatex-document"
+			],
+			[
+				"sele",
+				"selected"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "pages/physics/em/em_induction.tex",
+			"settings":
+			{
+				"buffer_size": 7025,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "pages/physics/em/magnetic_force.tex",
+			"settings":
+			{
+				"buffer_size": 3583,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Delete",
+				"LaTeXTools: Delete temporary files"
+			],
+			[
+				"Sni",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"Sniip\t",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"LAte",
+				"LaTeXTools: Delete temporary files"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"LatexTools",
+				"LaTeXTools: Delete temporary files"
+			],
+			[
+				"Latex",
+				"LaTeXTools: Delete temporary files"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"build",
+				"Build With: LaTeX"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"latex",
+				"LaTeXTools: Check system"
+			],
+			[
+				"setting",
+				"Preferences: Settings – Syntax Specific"
+			],
+			[
+				"sYNATEX",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"latex auto",
+				"LaTeXTools: View TeX package documentation"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTAL",
+				"Package Control: Install Package"
+			],
+			[
+				"latexTools Settings",
+				"LaTeXTools: Reset user settings to default"
+			],
+			[
+				"Latex ",
+				"Build With: LaTeX"
+			],
+			[
+				"view stat",
+				"View: Toggle Status Bar"
+			],
+			[
+				"instal ",
+				"Package Control: Install Package"
+			],
+			[
+				"INstal ",
+				"Package Control: Install Package"
+			],
+			[
+				"Active",
+				"ayu: Activate theme"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 558.0,
+		"history":
+		[
+			"c:",
+			"pip",
+			"clear",
+			"git",
+			"latex",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/differential_equations",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em"
+	],
+	"file_history":
+	[
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/magnetic_circuits.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/root.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/TeX reports the error was in file",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/differential_equations/laplace_transform.tex",
+		"/C/Users/mohha/Desktop/MarkKasuleProject4.cpp",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/differential_equations/homogeneousequations.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/magnetic_force.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/coulomb_law.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/mathnotes.cls",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/homework.cls",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/electric_field.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/differential_equations/diff_eq.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/apps.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/first_order_eq.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/different_methods.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/homogeneousequations.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/diff_eq.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/coulomb_law.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/electric_field.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/doc/note_guide.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/doc/home_work_guide.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/diff_first_order.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/electrostatics_kinematics.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/coulomblaw.tex",
+		"/C/Users/mohha/Desktop/Test/main.java",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/surface_integrals.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/ftc_theorems.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/examples.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/line_int.tex",
+		"/C/Users/mohha/Desktop/MathNotes/root.log",
+		"/C/Users/mohha/Desktop/MathNotes/mathnotes.cls",
+		"/C/Users/mohha/Desktop/MathNotes/homework.cls",
+		"/C/Users/mohha/Desktop/MathNotes/notes.sublime-project",
+		"/C/Users/mohha/Desktop/MathNotes/pages/calculus/test.tex",
+		"/C/Users/mohha/Desktop/MathNotes/pages/calculus/double_int.tex",
+		"/C/Users/mohha/Desktop/MathNotes/doc/note_guide.tex",
+		"/C/Users/mohha/Desktop/MathNotes/notes.sublime-workspace",
+		"/C/Users/mohha/Desktop/root.tex",
+		"/C/Users/mohha/Desktop/MathNotes/homework.fls",
+		"/C/Users/mohha/Desktop/MathNotes/root.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/Calc3/surfaces.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/Calc3/coordinatesystems.tex",
+		"/C/Users/mohha/Desktop/MathNotes/guide.tex",
+		"/C/Users/mohha/Desktop/MathNotes/pages/calculus",
+		"/C/Users/mohha/Desktop/MathNotes/template.tex",
+		"/C/Users/mohha/Desktop/MathNotes/.gitignore",
+		"/C/Users/mohha/Desktop/MathNotes/New Text Document.txt",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/Calc3/vector_functions.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/shitforbrains.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/root.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/root.pdf",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/latexmkrc",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc2/appint/applications_of_integration.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Prob47_5.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Prob23.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/root.toc",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/graphics/Prob47_5.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Vectors.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/graphics/Prob23",
+		"/C/Users/mohha/Desktop/Morrowind Code Patch-19510-2-4.7z",
+		"/C/Users/mohha/Desktop/Unification patch for 1.31 and 1.31GOTY game versions-2134-1-1.7z",
+		"/C/Users/mohha/Desktop/ProjectDel/prototype.cpp",
+		"/C/Users/mohha/Desktop/School Work/ProjectDel/prototype.cpp",
+		"/C/Users/mohha/Desktop/School Work/ProjectDel/items.h",
+		"/C/Users/mohha/Desktop/School Work/ProjectDel/prototype.c++",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/root.tex",
+		"/C/texlive/2019/texmf-dist/doc/latex/reledmac/doc-more/latexmkrc",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/python/mathplots.py",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Introduction.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Cal/Calc.tex",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Titlepage.tex",
+		"/D/CMSC140/Programming Project 1/MRafi_Project1.cpp",
+		"/C/Users/mohha/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/file_watcher.py",
+		"/C/Users/mohha/Desktop/School Work/MathNotes/.gitignore",
+		"/C/Users/mohha/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/mohha/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/mohha/AppData/Roaming/Sublime Text 3/Packages/User/SublimeOnSaveBuild.sublime-settings",
+		"/C/Users/mohha/Desktop/School Work/PhysicsIA/Pages/Introduction.tex",
+		"/C/Users/mohha/AppData/Local/Sublime Text 3/Cache/LaTeXTools/internal/preview_math/43caed79c413afc5fec3627c53b43a04.png.err",
+		"/C/Users/mohha/AppData/Roaming/Sublime Text 3/Packages/LaTeXTools/st_preview/preview_math.py",
+		"/C/Users/mohha/AppData/Local/Sublime Text 3/Cache/LaTeXTools/internal/preview_math/4ccf24a50c6df0edf22f0e17ca28d047.png.err",
+		"/C/Users/mohha/AppData/Local/Sublime Text 3/Cache/LaTeXTools/internal/preview_math/a0b0d466686fd69e09616f68dd8735ef.png.err",
+		"/C/Users/mohha/AppData/Local/Sublime Text 3/Cache/LaTeXTools/internal/preview_math/15a3e05bec92aba14aacbb244d7c778d.png.err",
+		"/C/Users/mohha/Desktop/School Work/PhysicsIA/Pages/Titlepage.tex",
+		"/C/Users/mohha/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/Users/mohha/Desktop/School Work/PhysicsIA/Pages/Data.tex"
+	],
+	"find":
+	{
+		"height": 54.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"emf",
+			"rm",
+			"mr",
+			"\\begin{equation*}\n",
+			"equation",
+			"1",
+			"equation",
+			"\\:\\:\\",
+			"equation",
+			"{",
+			"equation",
+			"physics",
+			"calculus",
+			" ",
+			"equation",
+			"e",
+			"equation",
+			"align",
+			"equation",
+			"n",
+			"equati",
+			"equation",
+			"eqution",
+			"equation",
+			" ",
+			"equation",
+			"*}",
+			"equation",
+			"enmerate",
+			"equation",
+			".",
+			"align",
+			"equation",
+			"eq",
+			"e",
+			"equation",
+			"   \n",
+			"equation",
+			" #",
+			"equation",
+			"partialx",
+			"equation",
+			"} ",
+			"equation",
+			"align",
+			"equation",
+			"align*",
+			"equation",
+			"= ",
+			"equation",
+			"par",
+			"package",
+			"equation",
+			"lbreak",
+			"equation"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "pages/physics/em/em_induction.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7025,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7025,
+								7025
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1827.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "pages/physics/em/magnetic_force.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3583,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2094,
+								2096
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 760.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 62.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 132.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 138.0
+	},
+	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"project": "notes.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"root",
+				"root.tex"
+			],
+			[
+				"",
+				"pages\\physics\\em\\magnetic_circuits.tex"
+			],
+			[
+				"Elec",
+				"pages\\physics\\em\\electric_field.tex"
+			],
+			[
+				"co",
+				"pages\\physics\\coulomb_law.tex"
+			],
+			[
+				"ft",
+				"pages\\calculus\\ftc_theorems.tex"
+			],
+			[
+				"examp",
+				"pages\\calculus\\examples.tex"
+			],
+			[
+				"gu",
+				"guide.tex"
+			],
+			[
+				"cal",
+				"pages\\Cal\\Calc.tex"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

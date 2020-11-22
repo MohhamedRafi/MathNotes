@@ -1,0 +1,14 @@
+{
+	"settings": {
+        "TEXroot": "root.tex",
+        "spell_check": true,
+		"dictionary": "Packages/Language - English/en_US.dic",
+        "hide_build_panel": "no_errors"
+    },
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	]
+}

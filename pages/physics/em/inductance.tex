@@ -1,0 +1,65 @@
+\chapter{Inductance}
+Let's consider a solenoid that is connected to a circuit. Remember, the solenoid will create a induced current if there is change in the magnetic flux. If we passed a varying current through the solenoid, we will create an induced emf inside the very same circuit that the solenoid was in. By Lenz's Law, this induced emf will opposes the same change in current that caused it. We call this \textbf{self-inductance}. There is also another type of inductance called mutual inductance but that is not important for upcoming discussions. We note that the inductance is equal to, 
+\begin{equation*}
+	\mr{L} = \frac{N\Phi}{i}
+\end{equation*}
+We note that if $i$, changes over time, then so does the magnetic flux. The equation can be rewritten,
+\begin{align*}
+	\mr{L}i &= N\Phi \\ 
+	L\dd{i}{t} &= N\dd{\Phi}{t}
+\end{align*}
+By Faraday's Law, 
+\begin{equation*}
+	\EMF = - N(\dd{\Phi}{t}) = -L\dd{i}{t}
+\end{equation*}
+Which is the self-induced emf of the solenoid in a circuit of varying current. 
+
+\section{Inductors}
+As noted above, the Lenz's Law would mean that the solenoid would have an emf that would oppose the very change in current that creates it. This means the the inductor acts like a stop sign, preventing the varying current from changing to quickly. We further note the behavior of inductors in a circuit. We know that from electrostatics, that a conservative electric field would have, 
+\begin{equation*}
+	\oint \vv{E} \cdot \diff{d}\vv{\ell} = 0
+\end{equation*}
+but the inductor will have induced electric field that isn't conservative, equal to the emf created by the inductor. 
+\begin{equation*}
+	\oint \vv{E}_n \cdot \diff{d}\vv{\ell} = -L\dd{i}{t}
+\end{equation*}
+But the integral only differs from the regular electric field around the inductor, so we can change the integral from some point $a$ to point $b$ around the inductor. Since we consider the inductor to be an ideal inductor, where inside a conductor the total electric field is going to equal zero, we know that the induced electric field must cancel out with the regular electric field on the surface (otherwise there wouldn't be any force moving the current through the solenoid). We state that $\vv{E}_n = -\vv{E}$, and solving the loop integral will yield, 
+\begin{equation*}
+	\oint \vv{E}_n \cdot \diff{d}\vv{\ell} = \int_a^b -\vv{E} \cdot \diff{d}\vv{\ell} = 
+	-L\dd{i}{t}
+\end{equation*}
+This just confirms that the voltage potential between $a$ and $b$, which is also the voltage potential between the terminals of the inductor, is equal to it's inductance times the change in the current. 
+
+\subsection{Computing Inductance}
+Let's say we have a toroidal solenoid. We want to compute it's inductance, sort of like how we wanted to compute the capacitance of a capacitor. The solenoid is typically the shape we use for the inductor (not toroidal), but the process would be similar. First we consider the magnetic flux of the inductor, 
+\begin{equation*}
+	\Phi = \vv{B} \cdot \vv{A} = \frac{\mu_0NIA}{2\pi r} 
+\end{equation*}
+Now we just simply find the inductance of the solenoid, 
+\begin{equation*}
+	\mr{L} = \frac{N\Phi}{i}=\frac{\mu_0N^2A}{2\pi r}
+\end{equation*}
+The inductance is solely dependent on the geometry of the object. 
+
+\subsection{Energy Stored In Inductors}
+Inductors store energy like capacitors. We first consider the a increasing current going through an inductor. Let's consider the power, 
+\begin{equation*}
+	\mr{P} = VI 
+\end{equation*}
+We already know that power is a change in energy, a transfer between the external source that is carrying in the current into the inductor. 
+\begin{equation*}
+	\int_0^t \mr{P} \diff{dt} = \int V_{ab}I \:\diff{dt}
+\end{equation*}
+We know that $V=L\dd{I}{t}$, solving the integral on the right-hand side, 
+\begin{equation*}
+	\int_0^i \mr{L}I \:\diff{dI} = \frac{1}{2}\mr{L}i^2
+\end{equation*}
+were $i$ is the final current. This energy is stored in the magnetic field of the coil. Like how the electric field stores the energy of the capacitor. We can solve the previous equation for a toroidal solenoid, and find the density per unit volume, 
+\begin{equation*}
+	u_b = \frac{1}{2}\mu\frac{N^2I^2}{(2\pi r)^2}
+\end{equation*}
+which can be expressed in terms of a magnetic field component, 
+\begin{equation*}
+	u_b = \frac{B^2}{2\mu_0}
+\end{equation*}
+

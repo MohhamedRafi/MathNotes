@@ -34,7 +34,7 @@ We gathered the final current $I$. This result makes sense. It doesn't depend on
 \subsection{Current Growth: Closing the Switch}
 If we solve the differential equation, from time $t_0 = 0$, where we closed the switch,
 \begin{equation*}
-	i = \frac{\EMF}{R}(1-e^{-e(R/L)t})
+	i = \frac{\EMF}{R}(1-e^{-(R/L)t})
 \end{equation*}
 We note that the time constant is $\tau=L/R$
 
@@ -86,7 +86,7 @@ The phase angle value can be determine by the initial condition. If at $t=0$, th
 \subsection{Energy of Oscillation}
 Since there is no lose in energy, the oscillation will happen forever. What happens is the energy gets transfered between the capacitor and inductor. We know that the maximum energy is going also be equal to energy in the capacitor when it's fully charged. It then will be equal to the sum of the energy of the inductor and the capacitor with dependence on the charge at specific times. 
 \begin{equation*}
-	\frac{1}{2}Li^2 = \frac{q^2}{2C} = \frac{Q^2}{2C}
+	\frac{1}{2}Li^2 + \frac{q^2}{2C} = \frac{Q^2}{2C}
 \end{equation*}
 
 \section{LRC Circuit}
@@ -117,3 +117,87 @@ The angular frequency of the under-damped oscillation,
 	\omega = \sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}}
 \end{equation*}
 When the square root terms cancel each other, or when $R=\sqrt{4L/C}$, the critical damping occurs, and you will see no more oscillation. 
+
+\section{AC Circuits}
+AC circuits are circuits that have alternating currents. The emf source for example a rotating coil of wire in a magnetic field. But either way, this will produce a current that is 
+cycles. We call this source a \textbf{alternator}. For example, we note this, 
+\begin{equation*}
+	v = V\cos(\omega t) 
+\end{equation*}	
+As a voltage at some time, where $V$ is the maximum voltage. The current similarly is described as 
+\begin{equation*}
+	i = I\cos(\omega t) 
+\end{equation*}
+\subsection{Phasor Diagrams}
+We use rotating vector diagrams to represent the varying voltages and current. The diagram shows the instantaneous value (the small $v$ and $i$ which varies with respect to time) as a projection
+onto a horizontal axis of a vector with a length equal to the maximum amplitude of the quantity. The vector would rotate counterclockwise with a speed equal to the $\omega$ (angular frequency).
+\pic{cbe9.png}{Phasor Diagrams}{cebrjbajsh}{0.75}
+\subsection{Measuring AC}
+We can use diodes to measure the current in an ac circuit. Diode is a device that conducts better in one direction than in the other, i.e one side has zero resistance while the other side has infinite resistance. We find the rectified average current $I_{rav}$ to be defined as 
+\begin{equation*}
+	I_{rav} = \frac{2}{\pi}I
+\end{equation*}
+where we consider the constant factor as an average value of the cosine or sine.
+\subsection{Root-Mean-Square Values}
+We can use the root-mean-square values of current and voltage. We start by squaring the current formula,
+\begin{equation*}
+		i^2 = I^2\cos^2(\omega t)
+\end{equation*}
+\begin{align*}
+	i^2 = I^2\frac{1}{2}(1+\cos(2\omega t)) = \frac{1}{2}I^2 + \frac{1}{2}I^2\cos(2\omega t)
+\end{align*}
+The average value of cosine with a period of 2$\omega$ is zero because half the time it's positive and the other half it's negative.
+So we get the root-mean-square value as 
+\begin{equation*}
+	I_{rms} = I\frac{\sqrt{2}}{2}
+\end{equation*}
+This hold rule for voltage as well,
+\begin{equation*}
+	V_{rms} = V\frac{\sqrt{2}}{2}
+\end{equation*}
+\subsection{Resistors in AC Circuits}
+Since we have a varying current, we can describe the voltage across the resistor as,
+\begin{equation*}
+	v_{r} = iR = (IR)\cos(\omega t) 
+\end{equation*}	
+If you note the phasor diagram, the voltage-resistor phasor is just proportional to the instantaneous current phasor. That means they share the same frequency and are in phase of each other. 
+The current and voltage of the resistor are parallel at very instant.  
+\pic{cbe10}{Resistor Phasor}{cbf}{0.65}
+\subsection{Inductors in AC Circuits}
+We setup a simple circuit with one inductor and an ac source. 
+\pic{cbe11}{Inductor Circuit}{cbef}{0.65}
+There is no total resistance but there is a voltage across the inductor. The induced emf is usually given by Faraday's Law. But note that this isn't the case here. Because if the current is in the positive direction (counterclockwise) and increasing (from a to b), then the change in current is also positive meaning the induced emf would be to the left opposing the increasing clockwise current. That means point a will have a higher potential then point b. 
+\begin{equation*}
+	v_L = L\dd{i}{t} = L\dd{}{t}(I\cos(\omega t)) = - I\omega L \sin(\omega t)
+\end{equation*}
+We note that the current and voltage phasors are out of phase by a quarter cycle (sine waves are out of phase to cosine waves by $\pi/2$). We usually describe the voltage being out of phase to the current, so we note that we can write the voltage at one point with respect to another is 
+\begin{equation*}
+	v = V\cos(\omega t + \phi)
+\end{equation*}	
+when the current is some source defined by 
+\begin{equation*}
+	i = I\cos(\omega t)
+\end{equation*}
+The phase angle describes how much the voltage is out of phase to the current. For a pure resistor that phase angle is 0, while pure inductors will have a phase angle of 90 degrees.
+We note the inductive reactance of the inductor as 
+\begin{equation*}
+	X_L = \omega L
+\end{equation*}
+Which the units are ohms, this inductive reactance is just a description of the self-induced emf that opposes any change in the current through the inductor. This value is directly proportional to the frequency of the circuit. Larger values of $X_L$ will produce smaller values of $I$, consider that $V_L = IX_L$. This means a high frequency voltage applied across will produce a small current, while the lower voltages would produce will give rise to a larger current. 
+\subsection{Capacitor in AC Circuit}
+The derivation is similar to the previous ones, so I'm just going to give the resulting formula. 
+\begin{equation*}
+	v_c = \frac{I}{\omega C}\sin(\omega t)
+\end{equation*}
+The peaks of the capacitor voltage occurs at max and min of the $q = \frac{I}{\omega}\sin(\omega t)$. It lags behind the current phase by an angle of $\phi = -\frac{\pi}{2}$.
+We can rewrite the equation
+\begin{equation*}
+	v_c = \frac{I}{\omega C}\cos(\omega t - \frac{\pi}{2})	
+\end{equation*} 
+Like before, we defined the capacitive reactance of the capacitor as 
+\begin{equation*}
+	X_c = \frac{1}{\omega C}
+\end{equation*}
+The relationship of the capacitive reactance and current is the reverse of the inductor. Higher capacitance will mean a lower reactance, allowing higher frequency currents to pass through, while the reverse is true as well. Lower frequency currents will pass through with lower capacitance. 
+\subsection{Summary of AC Circuit Components}
+\pic{cbe13}{Table of Circuit Elements}{cber1}{0.75}

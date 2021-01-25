@@ -5,6 +5,11 @@
 \usepackage{multicol}
 \usepackage{mathtools}
 
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
 
 \title{Math Notes}
 \author{Mohhamed Rafi}
@@ -39,6 +44,10 @@
 	\end{equation*}
 
 	The partial $\partial_x\phi$ refers to taking the partial derivative with respect to $x$ to all vector components.
+
+
+	\import{pages/linear_algebra/}{linear_systems}
+	\import{pages/linear_algebra/}{matrices}
 
 
 	% vector calculus

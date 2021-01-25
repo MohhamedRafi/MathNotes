@@ -1,0 +1,195 @@
+\chapter{Matrix Operations}
+This section will go in depth over the concept of the matrix. In linear algebra, we mostly deal with matrices. Here we will define different types of matrix operations. A matrix is a rectangular array of numbers. The size of a matrix is defined by the number of rows vs the number of columns. The first number of a matrix's size will always be the row number. 
+
+\section{Simple Matrix Operations}
+The simplest operation we can considered is the matrix addition and subtraction. As along as the matrices share the same size, you can add them together by adding the individual elements together. Say we have matrix \textbf{A} and \textbf{B}, both size $m \times n$. 
+
+\begin{equation*}
+	\begin{pmatrix}
+		a & b \\ 
+		c & d 
+	\end{pmatrix} \pm 
+	\begin{pmatrix}
+		e & f \\ 
+		g & h 
+	\end{pmatrix} = 
+	\begin{pmatrix}
+		a \pm e & b \pm f \\ 
+		c \pm g & d \pm h  
+	\end{pmatrix}
+\end{equation*}
+
+We say that two matrices are equal to each other if they share the same size and the components are equal to each other. Matrices can be multiplied by a constant. This just scales up the individual components. 
+
+\section{Matrix Multiplication}
+Matrix multiplication can get pretty complicated. First I'm going to provided by own interpretation of the operation. Then I will go over the more in depth methods. My method is basically the linear combination perspective of matrix multiplication but a bit expanded. 
+
+\pagebreak
+\subsection{Linear Combination Viewpoint}
+Geometrically we can view matrix multiplication as a collection of transforms. More specifically we can look it as a collection of linear transforms, as these transformations will keep parallel lines parallel. Let's note something first, a vector is just a single column matrix.
+
+\begin{equation*}
+	\mathbf{v} = \begin{pmatrix}
+		a \\ 
+		b \\ 
+		c 
+	\end{pmatrix} 
+\end{equation*}
+
+If $\mathbf{v}$ notes a position matrix in $\mathbb{R}^3$, then we can apply a linear transformation to this vector in form of multiplying it by a matrix.
+
+\begin{equation*}
+	\mathbf{v'} = 	\mathbf{A}\mathbf{v} = \begin{pmatrix}
+		\alpha & \beta \\
+		\gamma & \delta
+	\end{pmatrix}\begin{pmatrix}
+		a \\ 
+		b \\ 
+	\end{pmatrix} = a \begin{pmatrix}
+		\alpha \\ 
+		\gamma
+	\end{pmatrix} +  b\begin{pmatrix}
+		\beta \\ 
+		\delta
+	\end{pmatrix} = 
+	\begin{pmatrix}
+		a\alpha + b\beta \\ 
+		a\gamma + b\delta 
+	\end{pmatrix}
+\end{equation*}
+
+
+It look likes the column matrix's row elements are scaling the individual columns of the square matrix.
+
+There is something important to note from this example, one is the size of the matrices. Even though it's a column matrix, it still has a size, in this case $2\times1$. The square matrix is $2\times2$. Note that \textbf{column} of the square matrix is the same size of \textbf{row} of the vector. This is an important rule in any matrix multiplication, given an $m\times r$ multiplied by a $r\times n$, the product will be a $m \times n$ matrix. From the example, the rows from the column matrix can be seen as scaling the columns of the square matrix. This is why we have the rule, we must have enough rows for columns. Otherwise we would have an undefined matrix. 
+
+Now we can look at two $2\times2$ matrices to see this effect. By our previous rule we know that it's going to produce another $2\times2$ matrix. But since we considered a matrix a linear transformation that can be applied to a vector, we can consider two matrices being multiplied together as two succeeding transformations. Let's note a $2\times2$ matrix as $\mathbf{A}$ and the other one as $\mathbf{B}$. 
+
+\begin{equation*}
+	\mathbf{AB} = \begin{pmatrix}
+		a & b \\ 
+		c & d 
+	\end{pmatrix}\begin{pmatrix}
+		e & f \\ 
+		g & h 
+	\end{pmatrix}
+\end{equation*}
+
+First note that the transformations are combined from right to left, so it's $\mathbf{B}$ applied to \textbf{A}. We first look at the \textbf{B} as two different column matrices. We first apply the first column to \textbf{A} then the second column. We don't add them together but instead the columns of the product will be those single column transforms. I'm using commas to denote this point
+
+\begin{equation*}
+	\mathbf{AB} = \begin{pmatrix}
+		a & b \\ 
+		c & d 
+	\end{pmatrix}\begin{pmatrix}
+		e  \\ 
+		g 
+	\end{pmatrix} , 
+	\begin{pmatrix}
+		a & b \\ 
+		c & d 
+	\end{pmatrix}\begin{pmatrix}
+		f \\ 
+		h 
+	\end{pmatrix} = \begin{pmatrix}
+		ae + gb \\ 
+		ce + gd  
+	\end{pmatrix}, 
+	\begin{pmatrix}
+		af + bh \\ 
+		cf + dh
+ 	\end{pmatrix} = 
+ 	\begin{pmatrix}
+ 		ae + gb && af + bh \\ 
+ 		ce + gd && cf + dh 
+ 	\end{pmatrix}
+\end{equation*}
+
+Of course we can go further and simplify it down but the point of this view is that we have a very mental image of what's going with matrix multiplication. This is a very generic and quick way to multiply matrices by hand and gives a geometric insight to what actually is going on. Let's try it with a $3\times2$ by $2\times3$, which will produced a $3\times3$.
+\begin{equation*}
+	\mathbf{AB} = \begin{pmatrix}
+		a & b \\ 
+		c & d \\ 
+		e & f \\ 
+	\end{pmatrix}\begin{pmatrix}
+		g & h & i \\
+		j & k & l 
+	\end{pmatrix} = 
+	\begin{pmatrix*}
+	a & b \\ 
+	c & d \\ 
+	e & f \\ 
+	\end{pmatrix*}\begin{pmatrix*}
+	g \\ j 
+	\end{pmatrix*}, 
+	\begin{pmatrix*}
+	a & b \\ 
+	c & d \\ 
+	e & f \\ 
+	\end{pmatrix*}\begin{pmatrix*}
+	h \\ k 
+	\end{pmatrix*},
+	\begin{pmatrix*}
+	a & b \\ 
+	c & d \\ 
+	e & f \\ 
+	\end{pmatrix*}\begin{pmatrix*}
+	i \\ l
+	\end{pmatrix*} 
+\end{equation*}
+From above a single column in the \textbf{AB} product will be like this,
+\begin{equation*}
+	\begin{pmatrix*}
+	a & b \\ 
+	c & d \\ 
+	e & f \\ 
+	\end{pmatrix*}\begin{pmatrix*}
+	g \\ j 
+	\end{pmatrix*} = \begin{pmatrix*}
+	ag + bj \\ 
+	cg + dj \\ 
+	eg + fj 
+ 	\end{pmatrix*}
+\end{equation*}
+
+\subsection{Multiplication by Columns and by Rows}
+First let's defined what a Partitioned Matrices are. Since matrices are arrays of numbers, we can divide them into sub-divisions. 
+\pic{mbe6.PNG}{}{fig}{0.95}
+Simply just noting the sub-divisions as their own sub-matrices or row/column matrices. Now for the multiplication by column. Let's note with \textbf{AB} as two matrices with column partitions. We can use this to find specific columns or rows with computing the whole matrix product, 
+\begin{equation*}
+	\mathbf{AB}  = \textbf{A}\begin{pmatrix}
+		b_1 & b_2 & ... & b_n 
+	\end{pmatrix}
+\end{equation*}
+Where $j$ is the column you want to compute so it would be, 
+\begin{equation*}
+	\mathbf{AB}_j = \textbf{A}\begin{pmatrix}
+		b_j 
+	\end{pmatrix}
+\end{equation*} 
+Where $b_j$ is the column sub-matrix of the $j$-th column of \textbf{B}. Where $a_i$ is the row sub-matrix of the the $i$-th row of \textbf{A}.
+\begin{equation*}
+	\mathbf{AB}_i = \begin{pmatrix}
+		a_i 
+	\end{pmatrix}\textbf{B}
+\end{equation*}
+
+\section{Transpose of Matrix}
+The definition of a transpose is given a matrix that is $m \times n$, the transpose is defined to be a $n \times m$ matrix such matrix operation turns columns into rows and rows into columns. Given a \textbf{A}, the notation for the transpose is $\mathbf{A}^T$. For example, 
+
+\begin{equation*}
+	\begin{pmatrix}
+		a & b & c \\ 
+		d & e & f \\ 
+		g & h & i 
+	\end{pmatrix}^T = \begin{pmatrix}
+		a & d & g \\ 
+		b & e & h \\ 
+		c & f & i 
+	\end{pmatrix}
+\end{equation*}
+
+Now for square matrices, you can use the diagonal to swap the positions. This is because the diagonal will remain the same during a transpose of a square matrix.
+
+\section{Trace of Matrix}
+The trace of a matrix is notated as \textbf{tr} $($\textbf{A}$)$ such that the trace is defined to be the sum of the main diagonal of a square matrix. The main diagonal is defined to be the diagonal that is left to right, not right to left. 

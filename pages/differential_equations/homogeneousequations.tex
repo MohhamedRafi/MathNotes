@@ -49,3 +49,33 @@ We define $c_1\gamma_1 + c_2\gamma_2 = y$ and by linearity,
 	 c_1 \times 0 + c_2 \times 0 &= 0   
 \end{align*}
 Since $\gamma_1$ and $\gamma_2$ are known solutions to $\mr{L}\{y\} = 0$, we know that they evaluate to zero. There by proving our superposition principle. 
+
+\section{Solutions of Differential Equations}
+We are interested in linearly independent solutions. Note the superposition principle allows us to super impose any solution we have with independent solutions. To determine if a set of solutions are linearly independent, we take the Worskin Detriment,
+
+\begin{equation*}
+	\mathbf{W} = \begin{bmatrix}
+	    f_1 && f_2  && f_3 \\ 
+	    f'_1 && f'_2  && f'_3 \\ 
+	    f''_1 && f''_2  && f''_3 \\ 
+	\end{bmatrix}
+\end{equation*}
+
+If we have a set of functions $f_1, f_2, f_3 ...$, that are a solution to a homogeneous function, that set is independent linearly if and only if $\mathbf{W} \neq 0$ for all $x \in I$.
+
+\section{General Solution of a Homogeneous Equation}
+Let $y(x)$ be a solution and let $y_1,y_2$ be known solutions to a homogeneous equation $\mr{L(y)}=0$. Suppose on the common interval $I$, $x=t$ where $\mathbf{W}(y_1,y_2) \neq 0$ for all $x=t$. That means $y_1$ and $y_2$ are solutions that can be used to form a superposition, 
+
+\begin{equation*}
+	y(x) = c_1y_1 + c_2y_2
+\end{equation*}
+
+\section{General Solution of a Non-Homogeneous Equation}
+Any function free of arbitrary parameters, that satisfies a non-homogeneous equation is said to be a particular solution of the equation. 
+Now if you had a set of solutions, the linear combination of that set and the $y_p$ is also a solution. This means that if you took the solution set from a homogeneous equation, the fundamental solution set for the associated homogeneous equation.
+
+\begin{equation*}
+	y(x) = c_1y_1 + c_2y_2 + c_3y_p 
+\end{equation*}
+
+\subsection{Reduction of Order}

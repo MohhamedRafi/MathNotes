@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"bmat",
+				"\\begin{bmatrix*}                                  \tmathtools"
+			],
+			[
+				"pmatri",
+				"\\begin{pmatrix*}                                  \tmathtools"
+			],
+			[
+				"beginmatrix",
+				"\\begin{bmatrix*}                                  \tmathtools"
+			],
+			[
+				"beginmatr",
+				"\\begin{matrix*}                                   \tmathtools"
+			],
+			[
 				"sec",
 				"\\section{title}                                   \tlatex-document"
 			],
@@ -92,19 +108,28 @@
 	"buffers":
 	[
 		{
-			"file": "pages/physics/em/em_induction.tex",
+			"file": "root.tex",
 			"settings":
 			{
-				"buffer_size": 7025,
+				"buffer_size": 2649,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "pages/physics/em/magnetic_force.tex",
+			"file": "pages/linear_algebra/linear_systems.tex",
 			"settings":
 			{
-				"buffer_size": 3583,
+				"buffer_size": 7284,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "pages/linear_algebra/matrices.tex",
+			"settings":
+			{
+				"buffer_size": 7685,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -201,6 +226,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"File: New",
+				"File: New View into File"
+			],
 			[
 				"Delete",
 				"LaTeXTools: Delete temporary files"
@@ -329,24 +358,37 @@
 	"expanded_folders":
 	[
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/doc",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages",
-		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/differential_equations",
-		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics",
-		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em"
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/images",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/linear_algebra"
 	],
 	"file_history":
 	[
-		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/magnetic_circuits.tex",
+		"/C/Users/mohha/Desktop/HelloWorldApp.java",
+		"/C/Users/mohha/Desktop/manga-spider/manga_spider.py",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/root.pdf",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/linear_algebra/matrices.tex",
+		"/C/Users/mohha/Desktop/manga-spyder/manga_spyder.py",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/root.tex",
+		"/C/Users/mohha/Desktop/Crusader.Kings.III.v1.2.2.rar",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/doc/note_guide.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/differential_equations/homogeneousequations.tex",
+		"/C/Users/mohha/Desktop/mangadex.json",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/circuits.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/em_induction.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/electrical_energy.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/electrical_current.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/inductance.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/electric_field.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/magnetic_force.tex",
+		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/magnetic_circuits.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/TeX reports the error was in file",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/differential_equations/laplace_transform.tex",
 		"/C/Users/mohha/Desktop/MarkKasuleProject4.cpp",
-		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/differential_equations/homogeneousequations.tex",
-		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/magnetic_force.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/coulomb_law.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/mathnotes.cls",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/homework.cls",
-		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/em/electric_field.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/differential_equations/diff_eq.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/apps.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/first_order_eq.tex",
@@ -355,7 +397,6 @@
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/diff_eq.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/coulomb_law.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/electric_field.tex",
-		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/doc/note_guide.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/doc/home_work_guide.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/calculus/diff_first_order.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/physics/electrostatics_kinematics.tex",
@@ -386,7 +427,6 @@
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/Calc3/vector_functions.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/shitforbrains.tex",
 		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/pages/root.tex",
-		"/C/Users/mohha/Desktop/School Textbooks/MathNotes/root.pdf",
 		"/C/Users/mohha/Desktop/School Work/MathNotes/latexmkrc",
 		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Calc2/appint/applications_of_integration.tex",
 		"/C/Users/mohha/Desktop/School Work/MathNotes/pages/Prob47_5.tex",
@@ -426,7 +466,7 @@
 	],
 	"find":
 	{
-		"height": 54.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -440,6 +480,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pmatirx",
+			",\n",
+			"bmatrix",
+			"matrix",
+			"amatrix",
+			"equation",
+			"array",
+			"pmatrix",
+			"amatrix",
+			"equation",
+			"Oscillation",
+			"align",
+			"equation",
 			"emf",
 			"rm",
 			"mr",
@@ -512,63 +565,94 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "pages/physics/em/em_induction.tex",
+					"file": "root.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7025,
+						"buffer_size": 2649,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7025,
-								7025
+								1788,
+								1788
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1827.0,
+						"translation.y": 666.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "pages/physics/em/magnetic_force.tex",
+					"file": "pages/linear_algebra/linear_systems.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3583,
+						"buffer_size": 7284,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2094,
-								2096
+								1053,
+								1053
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 760.0,
+						"translation.y": 450.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "pages/linear_algebra/matrices.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5950,
+								5950
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 468.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -576,7 +660,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 31.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -621,7 +705,7 @@
 	"project": "notes.sublime-project",
 	"replace":
 	{
-		"height": 58.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -631,8 +715,24 @@
 		"selected_items":
 		[
 			[
+				"matrix",
+				"pages\\linear_algebra\\matrices.tex"
+			],
+			[
 				"root",
 				"root.tex"
+			],
+			[
+				"cir",
+				"pages\\physics\\em\\circuits.tex"
+			],
+			[
+				"homo",
+				"pages\\differential_equations\\homogeneousequations.tex"
+			],
+			[
+				"elec",
+				"pages\\physics\\em\\electric_field.tex"
 			],
 			[
 				"",

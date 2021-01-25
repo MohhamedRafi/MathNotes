@@ -1,0 +1,135 @@
+\chapter{System of Linear Equations}
+System of linear equations are equations such that each unknown variable are in a linear form. Let's start with some definitions, 
+
+\definition{Linear Combinations and Equations}{
+	A linear combination of the variables $x_1 ... x_n$, has the form of 
+	\begin{equation*}
+		a_1x_1 + a_2x_2 + ... + a_nx_n
+	\end{equation*}
+	where the numbers $a_1 ... a_n$ are considered to be constant coefficients of $\mathbb{R}^n$.
+	A linear equation takes a linear combination an assign some value to it, for now noted as $D$.
+	\begin{equation*}
+		a_1x_1 + a_2x_2 + ... + a_nx_n = D
+	\end{equation*}
+	We note that a linear system takes such a form of, 
+	\begin{align*}
+		a_1x_1 + a_2x_2 + ... + a_nx_n &= D_n \\ 
+		a_{2,1}x_{2,1} + a_{2,2}x_{2,2} + ... + a_{2,n}x_{2,n} &= D_{2,n}
+	\end{align*}
+	such at a set of solutions of $s_1, ..., s_2$ in a order form for the corresponding variables $x_1, ..., x_n$, is considered to be an $n-$tuple. 
+}
+
+These are basic terms we are going to be using in the linear algebra section.
+
+\newpage
+\section{Row Operations} 
+Let's note that we have a linear system of equations, 
+\begin{equation*}
+\begin{matrix*}
+	a_1x_1 && a_2x_2 && .... && a_nx_n && = D\\ 
+	a_{2,1}x_{2,1} && a_{2,2}x_{2,2} && .... && a_{2,n}x_{2,n} && =  D_{2} \\ 
+	a_{m,1}x_{m,1} && ... && .... && a_{m,n}x_{m,n}  && = D_n \\ 
+	
+\end{matrix*}
+\end{equation*}
+To find the solution said system, we have methods called row operations. These operations can convert these linear equations down into simple forms that allow for easy backwards substitutions.
+\begin{enumerate}
+\item Multiply a row by a non-zero constant.
+\item Interchange a row with another row.
+\item Add a constant multiple of one row to another row.
+\end{enumerate}
+
+\subsection{Augmented Matrix}
+Let $\mathbf{A}$ note a matrix that represents linear system. 
+
+\begin{equation*}
+	\begin{amatrix}{3}
+		a1 & a2 & a3 & D_1 \\ 
+		a1 & a2 & a3 & D_1 \\ 
+		a1 & a2 & a3 & D_1 \\ 
+	\end{amatrix}
+\end{equation*}
+
+\section{Gaussian Elimination}
+Gaussian Elimination is the method used to solve systems of linear equations. The goal is put a matrix in a form such that the solutions are easily seen. 
+
+\subsection{Row Echelon Form}
+A matrix in row echelon form requires 3 things, 
+\begin{enumerate}
+	\item If a row doesn't consist of all zeros, the first non-zero number in the row has to be a one, noted as the \textbf{leading 1}. 
+	\item If there is any row that is all zeros, they are moved towards the bottom of the matrix. 
+	\item In any two successive rows that do not consist of all zeros, the leading 1 in the leading row is to the left of the rows that come right after it. 
+\end{enumerate}
+
+A \textbf{reduced row echelon form} is one such that every \textbf{column} that contains a leading 1 will have zeros everywhere else in that column. We note that this is an example of a matrix in echelon form, 
+\begin{equation*}
+	\begin{amatrix}{3}
+		1 & 2 & 3 & D_1 \\ 
+		0 & 1 & 4 & D_2 \\ 
+		0 & 0 & 0 & D_3 \\ 
+	\end{amatrix}
+\end{equation*}
+while this is an example of a matrix in reduced row echelon form, 
+\begin{equation*}
+	\begin{amatrix}{3}
+		1 & 0 & 0 & D_1 \\ 
+		0 & 1 & 0 & D_2 \\ 
+		0 & 0 & 1 & D_3 \\ 
+	\end{amatrix}
+\end{equation*}
+
+\subsection{Solutions and Augmented Matrix}
+Let's note that there are two different cases of solutions to any system (ones that actually exist). The unique solution and the solution that generates multiple other solutions. Note a matrix in reduced row echelon form, $\mathbf{A'}$. 
+\begin{equation*}
+	\begin{amatrix}{3} 
+		1 & 0 & 3 & -1 \\ 
+		0 & 1 & -4 & 2 \\ 
+		0 & 0 & 0 & 0 \\ 	
+	\end{amatrix}
+\end{equation*}
+The equation that you can gather from this system will show that you would get a system of equations with one free variable. For example, 
+\begin{align*}
+	x &= -1-3z \\
+	y &= 2 + 4z    
+\end{align*}
+Notice how the leading 1 gives way to dependent variables, while the you have $z$ being a free variable. 
+
+\subsection{Gauss's Method}
+Gaussian Elimination will take any matrix and produce a reduced row echelon matrix. 
+\begin{enumerate}
+	\item Locate the leftmost column that doesn't consist of entirely of zeros. 
+	\item Interchange the top row with another row, if necessary, to bring a non-zero entry to the top of the column.
+	\item If that entry is "$a$", multiple that row by the constant $\frac{1}{a}$ to introduce a leading one. 
+	\item Multiply constant multiple of the top row to other rows so the column underneath the leading one is just full of zeros. 
+	\item Move to the right and down a row. Repeat the same steps for the other rows as above. 
+	\item If you have a leading one, where you need to introduce zeros above it's position in the column, multiply constant multiples of that row to above rows to get those zeros.  
+\end{enumerate}
+
+Steps 1-5 are considered to be the forward phase of the method, and those steps will reduce the matrix to row echelon form. While step 6 will reduce the matrix to reduce row echelon form.
+
+\section{Homogeneous Linear Systems}
+A system is considered homogeneous if the constants terms of that system are all zeros. 
+\begin{equation*}
+	\begin{matrix}
+		a_{11}x_1 + a_{12}x_2 + a_{13}x_3 = 0  \\ 
+		a_{21}x_1 + a_{22}x_2 + a_{23}x_3 = 0 
+	\end{matrix}
+\end{equation*}
+Each homogeneous system has two possible configurations for it's solutions. It can either be a trivial set of n-tuple of zeros. Or it can be a set of trivial solutions plus a non-trivial solution such that there is a possibility of infinitely many solutions. 
+
+\subsection{Free Variable Theorem}
+Consider a reduced row echelon form of a homogeneous system. 
+\begin{equation*}
+	\begin{amatrix}{4}
+		x_{k_1} & 0 & 0 & \Sigma () &0  \\ 
+		0 & x_{k_2} & 0 & \Sigma () &0 \\ 
+		0 & 0 & x_{k_r} & \Sigma () &0 \\ 
+		.. & .. & .. & .. & .. 
+	\end{amatrix}
+\end{equation*}
+In this case, the $\Sigma$ denotes any leftover free variables from the row operations. We note that the row operations don't change the columns of zeros that make this system homogeneous. It actually seems like the row operations don't really move columns so that make sense. This system will have $n$-unknowns with $r$-non-zero rows. That general form of a reduced row echelon matrix shows that any homogeneous system will have $n-r$ free variables. This is because the $n$ represents the number of columns while $r$ represents the number of rows and equations we are provided. Since there are going to be cases were $n>r$, that means we are going to have left-over variables based on the amount of $r$ equations we have. If you have less equations then unknowns, that means there are going to be less conditions imposed on some variables.
+
+Now consider $m$ equations with $n$-unknowns, $m<n$ so that also means $r<n$. This is because all $m=r$ realistically. This means that since $r<n$, all homogeneous equations with less equations that unknowns will have infinitely many solutions.
+
+\subsection{Pivot Columns and Rows}
+When a matrix is in row reduced echelon form, the positions of the leading 1's stay the same for any row and reduced row echelon matrix. We call the pivot column to be the column containing the leading 1 while the pivot row is the row that contains the leading one. The pivot position are the same positions as the leading 1's.

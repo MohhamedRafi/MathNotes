@@ -1,0 +1,285 @@
+\chapter{Mechanical Waves}
+Motion that exhibits back and forth motion is called periodic motion or oscillations. There are different types of waves. But before we go over that we will do a simple review of oscillations. The simplest spring will exhibit this type of motion. We will consider a spring on a frictionless horizontal surface. It's will be attached to a simple mass, such that we don't have to consider the gravitational force. 
+
+We define our origin to be at the point were the position of the spring is at equilibrium. It's neither stretched out or compressed. Now if $x > 0$, where x is the displacement from the equilibrium point, then we say that the spring is stretched. That means we would have the spring come back to the equilibrium point with some force, given by Hook's Law.
+
+\begin{equation*}
+	\vec{\mathbf{F}} = -k\vec{\mathbf{x}}
+\end{equation*} 
+
+Once it reaches it's equilibrium point, the motion will drag it behind the equilibrium point, and since the displacement is non-zero but smaller then the initial displacement, it will have some acceleration. This is acceleration will point back to the equilibrium point, and then the displacement would be forward from the origin point. This is an example of oscillations, and of course we can simplify it down into an equation that gives us this motion. 
+
+Since we are dealing with waves, we can showcase this motion with the following formula, 
+\begin{equation*}
+	x(t) = A\cos(\omega t + \phi )
+\end{equation*}
+The later sections will go more in-depth with the types of waves we will be dealing with.
+
+\section{Waves}
+
+First we should understand what a wave is. A wave in simple terms is a way to describe changes in a medium (this implies changes from it's equilibrium state) from one region of the system to another. Meaning that is something that disturbs the system as a whole. An important thing is that waves carry energy from one point to another, not matter. 
+
+\section{Types of Mechanical Waves}
+
+There are different types of waves, the first type is the simplest to understand. The mechanical waves are waves that travel through some medium. For example, sound waves travel through the air. In this case, the air around us is the medium. There are two different types of mechanical waves, and other waves in this category can be formed from a combination of these types. 
+
+\textbf{A transverse wave} are waves that are produced by displacements in the medium that are perpendicular to the direction of travel of the wave. The up/down motion on a string is an example of a transverse wave. Since the wave travels forward, but the displacement from the equilibrium point is the up/down motion, which is perpendicular to how the wave is traveling through the spring, is why it's considered to be transverse. 
+
+\textbf{A longitudinal wave} are waves that are produced by displacements in the medium that are parallel to the direction of travel of the wave. Like try pushing a flat plate to compress some water in a tank, the direction of the displacement is the same as the direction of wave that travels through the water. 
+
+An important thing to note is that medium doesn't actually move. The wave moves energy, not matter, so the particles in the wave. The \textbf{wave speed} is the name given to the speed of which the wave propagates through the medium. 
+
+\section{Periodic Transverse Waves}
+The string example will be used to showcase periodic transverse waves. 
+\pic{wvbe8}{Simple Spring}{Simple Harmonic Motion}{0.75}
+Let's say it has an amplitude $A$, frequency $f$, the angular frequency $\omega = 2\pi f$, and the period of $T=1/f=2\pi /\omega$. We can use these pieces of information to form a sinusoidal function that can represent the periodic wave. A single wave pulse would just have one peak, but a wave is made up peaks and valleys, so a wave is sum or a continuous series of pulses. When this wave moves through the medium, or in this case the string, every particle in that medium undergoes a simple harmonic motion with the same frequency we applied to the spring at one end. 
+
+\textbf{NOTE!}, that the motion of the string is actually just going up and down as the wave passes through. The medium is disturbed by the wave, causing it to undergo a simple harmonic motion, while the wave travels alongside the length of the string. 
+
+
+\section{Periodic Longitudinal Waves}
+The principles above for transverse waves apply to longitudinal waves, but notice the difference in the waves. 
+\pic{wvbe9}{Simple Spring}{Simple Harmonic Motion}{0.75}
+Transverse waves have disturbances perpendicular to the motion of the wave, but here the wave is actually traveling alongside each wave. The differing time marks makes it hard to see, but the vertical direction is trying to show how the the wavelength changes with respect to time. The are areas of compression and rarefaction (reduced density). These regions gives us the marks that we can use to determine the wavelength. As time advances, the compression and rarefaction regions move as well.  
+
+\section{Wave Speed}
+Since the wave is periodic, the shape of the pattern is repeating, so we can measure one repetition as the wavelength, $\lambda$. Then the wave speed would be give by the phrase, how many cycles per second ($f$, Hz) times the length of one cycle (wavelength), 
+\begin{equation*}
+v = \lambda f
+\end{equation*} 
+There is an inverse relationship between the wavelength and frequency. As the frequency increases you have more cycles per second of course. That means each "cycle" is much smaller then the previous frequency. That means the length of the repetition is actually smaller. So the wavelength decreases with respect to frequency for a constant wave speed. The wave speed remains constant for all frequencies of said waves, and the wave speed is said to be determined by the properties of the material of the medium.
+
+\section{Mathematical Description of a Wave}
+As in the introduction, the wave formula I introduced was a simple 1D formula that just looked at a single particle with respect to time. But let's try finding a more complex and general description of a wave. If we consider a string whose length will be the x-axis, we know that the waves on this string will be transverse. The particles at position $x$ will be displaced by some $y$ with respect to the wave. So we know that $y$ will have a dependence on where we are looking at ($x$) and what moment at time we are looking at ($t$). So $y=y(x,t)$ will be a multi variable function. For longitudinal waves, the principle holds true but it's important to note, that the displacement is parallel to the x-axis.
+
+First let's considered what's happening to particles at different points at differing points in time. We know that every point in the medium will oscillate in some form of a SHM with the same amplitude and frequency. But the oscillations are not in step with each other. For example, let's note a point on the string as $B$. $B$'s at max $y$ at $t=0$, then returns to $y=0$ after some $t=\frac{2}{8}T$. This happens to all the other points as well, but the exact timing lags behind. This means, let's say point $C$, which is further down from $B$, hit's max at $t=\frac{4}{8}T$ and returns at $t=\frac{6}{8}T$. Each particles' motion differs by some fraction of a single cycle. We note these differences as \textbf{phase differences}.
+
+Let's work backwards for now, consider the case $y(0,t)$, where we are looking at the particle at very start of the string. We know that $\omega = 2\pi f$, so our equation becomes 
+\begin{equation*}
+	y(x=0,t) = A\cos(\omega t) = A\cos(2\pi ft)
+\end{equation*}
+Remember we are developing a wave equation that tracks the wave disturbances, not the particle's motions. We can use the equation to showcase the motion of the particles but we have to think about the properties of a periodic wave to actually develop it. Let's work backward. Let's say at time $t=0$ and $x=0$, the particle is at a max displacement of $y=A$, the wave will travel from $x=0$ to some point $x$. The time for it to travel $x$-distance would be given by $\frac{x}{v}$, where $v$ is the wave speed. We know since the motion lags, at time $t$, the motion at position $x$ would be the same as the motion at position $x=0$ at a earlier point in time $t=t-\frac{x}{v}$. So we can replace the original $t$ in our equation with the expression we got for the earlier time. 
+\begin{equation*}
+	y(x,t) = A\cos[\omega (\frac{x}{v} - t)]
+\end{equation*}
+We can write the equation down into more usable forms. First we consider, 
+\begin{equation*}
+	y(x,t) = A\cos[2\pi\omega(\frac{x}{\lambda}-\frac{t}{T})]
+\end{equation*}
+Then we let $k=\frac{2\pi}{\lambda}$, called the wave number, 
+\begin{equation*}
+	y(x,t) = A\cos[kx - \omega t]
+\end{equation*}
+
+Now let's consider a wave function that is moving backwards or in the negative $x$ direction. We know from the previous statement, that the motion at position $x$ at time $t$ would equal the motion at position $x=0$ at an earlier time. This means that the looking forward in time, the motion would remain the same as it did in it's past. In reverse, looking back in time, the motion would remain the as in the future. We can summarize that statement by saying, at a time from $t + \frac{x}{v}$, at position $x$, it would remain the same position $x=0$ at time $t=0$. 
+\begin{equation*}
+	y(x,t) = A\cos[kx + \omega t]
+\end{equation*}
+We note that the quantity that is inside the cosine, $(kx + \omega t)$ is called the phase, and it's always measured in radians. The phase can be use to determine what is going on in the sinusoidal cycle. Meaning that you can use to determine for any values of $x$ and $t$ what is going to occur. For example, if it was a max amp at $y$, the phase could be any value of $n\pi$, where $n$ is either $0$ or any even integer.  
+
+
+\subsection{Wave Functions}
+To summarize this section, the wave traveling in a positive direction would be, 
+\begin{equation*}
+	y(x,t) = A\cos[kx - \omega t] 
+\end{equation*}
+the wave traveling in a negative direction would be, 
+\begin{equation*}
+	y(x,t) = A\cos[kx + \omega t]
+\end{equation*}
+
+
+\subsection{Phase Velocity}
+The wave speed is the speed which the wave travels, or in our case if we where following the wave, how fast we would have to move alongside a point in the given phase. Consider the phase, 
+\begin{equation*}
+	kx - \omega t = 0 
+\end{equation*}
+This statement for a forward moving wave is true because the wave speed is constant. Meaning if we took the derivative of displacement (velocity), 
+\begin{equation*}
+	\dd{x}{t} = \frac{\omega}{k} = v
+\end{equation*}
+We can get an expression of velocity for the wave.	
+
+\subsection{Graph of the Wave Function}
+We can develop the graph of the wave function by looking at 2D snapshots of it. Consider the snapshot when $t=0$. This means we are going to look at a graph of displacement vs position of the particles on the length of the string. Or in simpler terms, the shape of the string at $t=0$. Of course, this means that you will be getting the wavelength from the graph instead of the period. In reverse, when you set the position equal to zero, you are looking at the displacement of a particle at position $x=0$ over some function of time. This means you will be able to get the period of wave from this snapshot.
+
+\newpage
+\section{Particle Velocity and Acceleration}
+We can find the particle's transverse velocity from the wave equation. Remember that a transverse wave will be do to a displacement from the equilibrium perpendicular to the direction of travel of the said wave. So the individual particles at any moment $t$, will be oscillating up and down. The velocity we are measuring is that said motion. 
+
+We start with the wave equation, and we take the partial derivative of the said equation with respect to time. Note, I'm using the simplification of the partial derivative operator.
+\begin{equation*}
+	\partial_t y(x,t) = \partial_t (A\cos(kx - \omega t)) = - \omega A\cos(kx - \omega t) = \omega A\sin(kx - \omega t)
+\end{equation*}
+\begin{equation*}
+	v_y = \omega A\sin(kx - \omega t)
+\end{equation*}
+Note that $v_y$ is use to note the difference from the wave speed $v$.
+Now for the transverse acceleration,
+\begin{align*}
+	a_y = \pdi{y}{t}{2} = - \omega^2 A\sin(kx - \omega t)
+\end{align*}
+
+\subsection{Slope and Curvature}
+The partial with respect time can give us information of the velocity and acceleration of the wave. But the partial with respect to x can us information of the geometry of the wave. We can use it find the slope of the string and curvature of the string, 
+
+\begin{align*}
+	\pdd{y}{x}{} &= -kA\sin(kx-\omega t)\\
+	\pdd{y}{x}{2} &= -k^2A\cos(kx-\omega t) 
+\end{align*}
+
+\section{Wave Equation}
+One of the most important equations is the ratio between the second partial derivatives of the wave function.
+\begin{equation*}
+	\pdd{y}{x}{2}/\pdd{y}{t}{2} = \omega^2/k^2=v^2
+\end{equation*}\begin{equation*}
+	\pdd{y}{x}{2} = \frac{1}{v^2}\pdi{y}{t}{2}
+\end{equation*}
+This is the 1D wave equation, that states that any disturbance can propagate as a wave along the x-axis with the wave speed $v$. The wave equation doesn't necessarily state that sinusoidal waves need be the only waves that fit the equation.
+
+\newpage
+\section{Speed of a Transverse Wave}
+We are going to try to determine the speed of a transverse wave on a string. The speed of a transverse wave on a string are due to the tension in the string and the mass per unit length (or linear mass density). The increased tension also increases the restoring forces that make sure the string returns back to it's original state. This would also increase the wave speed as well. Well increasing the mass per unit length would slow down the wave speed as it would feel heavier. 
+
+Let's consider a string that is perfectly flexible, in it's equilibrium position. The tension on the string is $F$. The linear mass density on the string is $\mu$. At time $t=0$, there is a constant upward force on end of the string. The other end is held down by the tension. 
+\pic{wvbe10}{}{f23}{0.75}
+The moving parts of the string, move up with a constant transverse velocity. We note the impulse-momentum theorem, the total change in transverse component of momentum of the moving string is equal to the impulse. Meaning from $t=0$ to time $t$, the force applied $F_y$, is equal to the transverse momentum of the string. This should make sense as we are considering waves that move with a constant wave speed. 
+\begin{equation*}
+	F_yt = mv_y
+\end{equation*}
+We note that the point of where the string is moving and not moving moves also with a constant velocity. We note this point as $P$. As $P$ moves, the amount of mass increases, meaning that there has to be an increase in momentum. The force doesn't necessarily change, but the mass does, so the momentum increases. We note that $P$ moves at the wave speed. We note that the total force at the start of the string, where our wave originates, has the horizontal components of $F$ and $F_y$. this is because we have no motion directed alongside the string (remember this is a transverse wave, if we did it would be a combination between a transverse and longitudinal wave). 
+
+Note the geometry of the diagram, we can use similar triangles to derivative an expression for wave speed. 
+\begin{align*}
+	\frac{F_y}{F} &= \frac{v_yt}{vt} \\ 
+	F_y &= F\frac{v_y}{v}
+\end{align*}
+We know the impulse is equal the transverse force applied over time $t$, 
+\begin{equation*}
+	F_yt = F\frac{v_y}{v}t
+\end{equation*}
+We set this expression equal to the momentum,
+\begin{equation*}
+	m_iv_y = F\frac{v_y}{v}t
+\end{equation*}
+Now $m_i$ is the total mass of the segment of length, and since we know the length is going to equal the distance that the point $P$ travels. Since it originates at the origin and it travels with a wave speed $v$. So the total distance is equal to $vt$, and the total mass would be the linear mass density times the distance, $\mu*vt$.
+\begin{align*}
+	\mu vtv_y &= F\frac{v_y}{v}t \\ 
+	v &= 	\sqrt{F/\mu}  
+\end{align*}
+
+
+\subsection{The Speed of Mechanical Waves}
+Later on, it can be seen that all mechanical waves have some expression of this form, 
+
+\begin{equation*}
+	v = \sqrt{\frac{\text{Restoring force returning the system to equilibrium}}{\text{Inertia resisting the return to equilibrium}}}
+\end{equation*}
+
+In case of the string, the inertia comes from the mass density or mass of the string. The tension is part of the restoring force of the string.
+
+\newpage
+\subsection{Second Method: Newton's Second Law}
+\pic{wvbe11}{}{f1}{0.75}
+We can use Newton's second law to find the exact same result. First we we consider small mass segments of the string in it's equilibrium position, $m_i = \mu\Delta x$. The small force segments can be broken down into their respective force components. The $x$-component would have equal magnitude to $F$, but add up to zero because we are dealing with transverse motion.We note that the ratio of the forces in the y direction vs the horizontal forces is equal to the slope at those points. 
+
+\begin{equation*}
+	\frac{F_{1y}}{F} = -\pdi{y}{x}_{x}
+\end{equation*}
+\begin{equation*}
+	\frac{F_{2y}}{F} = \pdi{y}{x}_{x+\Delta x}
+\end{equation*}
+Solve for the individual $F_{iy}$, then add them up,
+\begin{equation*}
+	F_y = F_{1y} + F_{2y} = F\left[ \pdi{y}{x}_{x+\Delta x} - \pdi{y}{x}_{x} \right]
+\end{equation*}
+We then use Newton's Second Law,
+\begin{align*}
+	F\left[ \pdi{y}{x}_{x+\Delta x} - \pdi{y}{x}_{x} \right] &= \mu \Delta x \pdd{y}{t}{2} \\ 
+	\frac{\mu}{F}\pdd{y}{t}{2} = \frac{\left[ \pdi{y}{x}_{x+\Delta x} - \pdi{y}{x}_{x} \right]}{\Delta x} \\
+	\pdd{y}{x}{2} = \frac{\mu}{F}\pdd{y}{t}{2}
+\end{align*}
+As you can see we get the wave equation again, meaning that $v = \sqrt{F/\mu}$. The same result we got last time.
+
+\newpage
+\section{Energy in Wave Motion}
+Every wave motion has energy alongside it. To create a wave, we needed to apply a force. That said point were the applied force is moves, so we do work on the system. As the wave moves, the medium exerts a force on one region of space to another. This how a wave moves energy from one region of space to another. For example, one a string, lets denote a point on it called $A$. Let's say that this wave moves left to right from point $A$. To the left of $A$, we have a force alongside the string, the restorative force, that points from right to left. We note that $F_y/F_x$ is equal to the negative slope of string at that point. As noted before, the $F_x$ will always equal horizontal $F$, and add up to zero. So the slope is actually $F_y/F$, which is equal to the partial of wave function $y(x,t)$ with respect to $x$. 
+\begin{equation*}
+	F_y(x,t) = -F\pdi{y}{x}
+\end{equation*}
+When point a moves in the $y$-direction, the force $F_y$ does work on this point (trying to bring it back to equilibrium), and transfers energy to the right of $A$. We defined power to be $\vv{F}\vv{v}$, so we can try doing this with the wave function. The power is from the work of moving the point back to equilibrium times it's transverse velocity.
+\begin{equation*}
+	P(x,t) = F_y(x,t)v_y(x,t) = -F\pdi{y}{x}\pdi{y}{t}
+\end{equation*}
+\begin{equation*}
+	P(x,t) = Fk\omega A^2\sin^2\left[ kx - \omega t \right]
+\end{equation*}
+We note that we already found that $v^2 = F/\mu$, so we can finally express the power function like this,
+\begin{equation*}
+	P(x,t) = \sqrt{\mu F}\omega^2 A^2 \sin^2\left[ kx - \omega t \right]
+\end{equation*}
+Of course, we can find the max power since sine has a max value of $1$, and over time, any whole number of cycles yields an average value for sine of $1/2$. 
+\begin{align*}
+	P_max=\sqrt{\mu F}\omega^2A^2 \\ 
+	P_av = \frac{1}{2}\sqrt{\mu F}\omega^2A^2
+\end{align*}
+\subsection{Wave Intensity}
+Waves on a string are one-dimensional, while the other types of waves can carry energy in multiple directions. We defined \textbf{intensity}, $I$, to be the time average rate at which energy is transported by the wave, per unit area, across a surface perpendicular to the direction of propagation. The units are usually measured in watts per square meter. For example, if a wave propagates through 3D space, equally in all directions, then we know the surface is going to be a sphere. The $I$ is going to depend on the distance from the source, and $I \propto \frac{1}{r^2}$. 
+The intensity is defined to be in this case, 
+\begin{equation*}
+	I_1 = \frac{P}{4\pi r_1^2}
+\end{equation*}
+Now if you had another sphere, with a different radius, $r_2$, with no energy absorbed between the two spheres, then the power must be the same for both of them. So the ratio between intensity would just be the ratio between the radi.
+
+\begin{equation*}
+	\frac{I_1}{I_2} = \frac{r_2^2}{r_1^2}
+\end{equation*}
+
+\section{Wave Interferences, Superposition, and Boundary Conditions}
+\textbf{Interference} is when two or more waves overlap with each other. It occurs in the same region of space in the medium. This is where the boundary of the medium comes in to play. If there is a fixed end in the string, what happens when you send a wave across that said string? Well you get a wave reflected back to you, kind of like Newton's Third Law. This is actually because the string's wave exerts a upward force on that said fixed boundary, which the boundary sends a downward on force on the string. This means the wave is actually now flipped, the pulse could have been upwards but now the reflected force on the string now is making the pulse go downwards. The pulse that started the wave is called the \textbf{incident} pulse, and the reflected pulse moves in the opposite direction of that said pulse. When the boundary is free, the opposite happens. Since there is nothing to absorb the impact of the restoring force, there is nothing to invert the wave, so the wave moves back in the opposite direction but upwards as well. 
+
+\subsection{Superposition}
+You can take two wave functions and add them together, basically because the additive property of the wave function comes from the fact that you can have sums of linear wave functions.
+\begin{equation*}
+	y(x,t) = y_1(x,t) + y_2(x,t)
+\end{equation*}
+If both $y_1$ and $y_2$ individually satisfies the wave equation, then their sum will satisfy the wave equation. But this only occurs in systems that have linear wave functions, and their wave equation is not linear. By this metric, you can't use the principle of superposition.
+
+\newpage
+\section{Standing Waves on a String}
+Consider a boundary condition such that both tends of the string are fixed. What happens is that when a wave passes through, the wave is reflected on both sides. This causes the wave to look like it's oscillating in place. We call this a \textbf{standing wave}. Standing waves have things called \textbf{nodes} and \textbf{anti-nodes}. Nodes are places were the standing wave remains at zero, while anti-nodes oscillate between min and max amps.
+
+The principle of standing waves can be described by \textbf{interference}. Since the waves are reflected at both ends, you got a wave traveling to the right and to the left. Places were they meet add up, and if those places you get a zero value from the sum, those places are called \textbf{nodes}. This is called \textbf{destructive interference}. The places that the waves add up to their respective maximum are called \textbf{anti-nodes}. That is called \textbf{constructive interference}.
+
+\subsection{Standing Wave Equation}
+We can get the standing wave equation by adding two wave functions with equal amps. We consider $y_1$ to be the incident wave, and $y_2$ to be the reflected wave. The $y_1$ is traveling to the left, while $y_2$ would be traveling to the right. At $x=0$, $y_1$ traveled from the right to the left, and is reflected. That means $y_2$ will be starting from $x=0$, and will travel to the right from the left. 
+\begin{align*}
+	y_1(x,t) &= -A\cos(kx + \omega t) \\ 
+	y_2(x,t) &= A\cos(kx + \omega t)
+\end{align*}
+The sign represents what is happening at $x=0$. Remember the $y_1$ is being reflected, so that means it's amp is at it's min. At this point $y_1$ and $y_2$ are at a phase difference of $\pi rads$. We add them up,
+\begin{equation*}
+	y(x,t) = 2A\sin(kx)\sin(\omega t)
+\end{equation*}
+You can find positions were the nodes occur by finding where the $x$-sine factor is zero. 
+\begin{equation*}
+	x = 0, \frac{\pi}{k},\frac{2\pi}{k},\frac{3\pi}{k}
+\end{equation*}
+Or know that $k=2\pi/\lambda$
+\begin{equation*}
+	x = 0, \frac{\lambda}{2},\frac{2\lambda}{2},\frac{3\lambda}{2}
+\end{equation*}
+
+\subsection{Normal Modes of Strings}
+A standing wave that has some length $L$, has to be such that the length is some integer multiple of $\frac{\lambda}{2}$.
+\begin{equation*}
+	L = n\frac{\lambda}{2}
+\end{equation*}
+You can solve for frequency as well, and this is called the fundamental frequency,
+\begin{equation*}
+	f_n = n \frac{v}{2L}
+\end{equation*}
+These are also called harmonics. The \textbf{normal mode} of a oscillating system is a motion that is where all particles of the said system move sinusoidally with the same frequency. You can find the fundamental frequency of the first using the restoring force / inertia from,
+\begin{equation*}
+	f_1 = \frac{1}{2L}\sqrt{\frac{F}{\mu}}
+\end{equation*}
